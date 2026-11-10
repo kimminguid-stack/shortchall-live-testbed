@@ -13,8 +13,8 @@
    --tb-h: 실제 화면 높이. 홈 화면 앱(standalone)으로 열면 iOS가 100vh/100dvh를 상태바 높이만큼
    짧게 잡아서 아래가 비는 문제가 있어, 아래 스크립트가 기기 화면 높이로 직접 넣는다. */
 @media (max-width: 600px) {
-  html, body { margin: 0 !important; height: var(--tb-h, 100dvh) !important; overflow: hidden !important; background: #0F0F11 !important; overscroll-behavior: none; }
-  [data-app-shell] { position: fixed !important; inset: 0 auto auto 0 !important; padding: 0 !important; min-height: 0 !important; height: var(--tb-h, 100dvh) !important; width: 100vw !important; display: block !important; overflow: hidden !important; }
+  html:root, html:root body { margin: 0 !important; height: var(--tb-h, 100dvh) !important; overflow: hidden !important; background: var(--tb-bg, #FFFFFF) !important; overscroll-behavior: none; }
+  [data-app-shell] { position: fixed !important; inset: 0 auto auto 0 !important; background: transparent !important; padding: 0 !important; min-height: 0 !important; height: var(--tb-h, 100dvh) !important; width: 100vw !important; display: block !important; overflow: hidden !important; }
   [data-app-shell] > div { width: 100vw !important; height: var(--tb-h, 100dvh) !important; overflow: hidden !important; }
   html body [data-app-shell] [data-screen-label="숏챌 앱"] {
     width: 100vw !important; max-width: 100vw !important; height: var(--tb-h, 100dvh) !important; margin: 0 !important;
@@ -36,6 +36,33 @@
   window.addEventListener('resize', setH);
   window.addEventListener('orientationchange', function () { setTimeout(setH, 300); });
   document.addEventListener('DOMContentLoaded', setH);
+})();
+</script>
+<meta name="theme-color" content="#FFFFFF">
+<script>
+/* 아이폰이 상단 상태바 뒤 영역을 페이지 배경색으로 칠하고 흐리게 처리한다.
+   배경색이 지금 화면 상단 색과 다르면 회색 블러 띠가 생기므로, 화면 상단(헤더) 색을 읽어
+   페이지 배경과 theme-color에 계속 맞춰 준다. */
+(function () {
+  var last = '';
+  function topColor() {
+    var x = Math.round(window.innerWidth / 2), y = 70;
+    var el = document.elementFromPoint(x, y);
+    while (el && el !== document.documentElement) {
+      var c = getComputedStyle(el).backgroundColor;
+      var m = c && c.match(/rgba?\(([^)]+)\)/);
+      if (m) { var v = m[1].split(',').map(parseFloat); if (v.length < 4 || v[3] > 0.6) return 'rgb(' + v[0] + ',' + v[1] + ',' + v[2] + ')'; }
+      el = el.parentElement;
+    }
+    return null;
+  }
+  function sync() {
+    if (window.innerWidth > 600) return;
+    var c = topColor(); if (!c || c === last) return; last = c;
+    document.documentElement.style.setProperty('--tb-bg', c);
+    var meta = document.querySelector('meta[name="theme-color"]'); if (meta) meta.setAttribute('content', c);
+  }
+  setInterval(sync, 250);
 })();
 </script>
 <script>
