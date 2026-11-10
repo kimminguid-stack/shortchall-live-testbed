@@ -600,10 +600,10 @@
 
     <!-- 숏챌몰 -->
     <sc-if value="{{ vShop }}" hint-placeholder-val="{{ false }}">
-      <div data-screen-label="숏챌 라이브" style="position:absolute;inset:0;display:flex;flex-direction:column;padding-top:50px;background:#0F0F11;color:#F7F7F8">
+      <div data-screen-label="숏챌 라이브" style="position:absolute;inset:0;display:flex;flex-direction:column;padding-top:62px;background:#0F0F11;color:#F7F7F8">
         <div id="om-hero-bg" aria-hidden="true" style="position:absolute;left:0;right:0;top:0;height:620px;z-index:0;pointer-events:none;overflow:hidden;display:{{ heroD }};will-change:transform"><span style="position:absolute;inset:-80px;background-color:#202024;background-image:{{ heroBgImg }};background-size:cover;background-position:center;filter:blur(46px) saturate(1) brightness(.88);transform:scale(1.15);transition:background-image .6s ease"></span><span style="position:absolute;inset:0;background:linear-gradient(to bottom, rgba(15,15,17,.24) 0%, rgba(15,15,17,.40) 38%, rgba(15,15,17,.80) 72%, #0F0F11 96%)"></span></div>
         <sc-if value="{{ fsOn }}" hint-placeholder-val="{{ false }}">
-          <div data-screen-label="더보기 풀스크린" style="position:absolute;inset:0;z-index:40;background:#0F0F11;display:flex;flex-direction:column;padding-top:50px;animation:smFade .18s ease">
+          <div data-screen-label="더보기 풀스크린" style="position:absolute;inset:0;z-index:40;background:#0F0F11;display:flex;flex-direction:column;padding-top:62px;animation:smFade .18s ease">
             <div style="flex-shrink:0;position:relative;display:flex;align-items:center;justify-content:center;height:52px;padding:0 52px">
               <button onClick="{{ closeFs }}" aria-label="뒤로" style-active="opacity:.6" style="all:unset;cursor:pointer;position:absolute;left:6px;top:6px;width:40px;height:40px;display:flex;align-items:center;justify-content:center"><span data-icon="chevron_left:regular" style="width:24px;height:24px;display:block;line-height:0;color:#F7F7F8"></span></button>
               <span style="font-size:18px;line-height:26px;font-weight:700;letter-spacing:-0.02em;color:#F7F7F8;white-space:nowrap">{{ fsTitle }}</span>
@@ -678,6 +678,7 @@
                   </span>
                   </sc-if>
                 </span>
+                <sc-if value="{{ h.isLive }}" hint-placeholder-val="{{ true }}"><svg aria-hidden="true" width="46" height="14" viewBox="0 0 46 14" style="position:absolute;right:38px;bottom:27px;z-index:2;display:block;filter:drop-shadow(0 1px 4px rgba(0,0,0,.35))"><path d="M1 13H44L32 2" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></sc-if>
                 <span style="position:absolute;left:20px;right:20px;bottom:{{ h.txtB }};display:flex;flex-direction:column-reverse;gap:10px">
                   <sc-if value="{{ h.isSched }}" hint-placeholder-val="{{ false }}"><span style="display:flex;align-items:center;gap:5px;min-width:0;margin-top:6px;padding-right:90px;font-size:17px;line-height:22px;letter-spacing:-0.018em;font-weight:700;color:#FFFFFF;text-shadow:0 1px 8px rgba(0,0,0,.45)"><span style="min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ h.meta }}</span></span></sc-if>
                   <span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;max-width:228px;font-size:20px;line-height:28px;letter-spacing:-0.025em;font-weight:800;color:#fff;word-break:keep-all;text-shadow:0 1px 10px rgba(0,0,0,.35)">{{ h.title }}</span>
@@ -950,7 +951,7 @@
             <span style="display:block;margin-bottom:-2px;font-size:19px;line-height:26px;letter-spacing:-0.022em;font-weight:700;color:#F7F7F8;word-break:keep-all">다음 라이브</span>
             <sc-for list="{{ nextLives }}" as="nl" hint-placeholder-count="3">
               <span style="width:100%;box-sizing:border-box;display:flex;gap:14px;padding:0;background:transparent">
-                <span style="position:relative;flex-shrink:0;width:124px;height:124px;border-radius:16px;overflow:hidden;background-color:#202024;background-image:{{ nl.img }};background-size:cover;background-position:center"><span style="position:absolute;inset:0;background:rgba(0,0,0,0.46)"></span><span style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;color:#FFFFFF;text-align:center"><span style="font-size:13px;line-height:17px;letter-spacing:-0.01em;font-weight:700;white-space:nowrap">{{ nl.dateS }}</span><span style="font-size:22px;line-height:26px;letter-spacing:-0.02em;font-weight:800;white-space:nowrap">{{ nl.t24 }}</span></span></span>
+                <span style="position:relative;flex-shrink:0;width:144px;height:144px;border-radius:18px;overflow:hidden;background-color:#202024;background-image:{{ nl.img }};background-size:cover;background-position:center"><span style="position:absolute;inset:0;background:rgba(0,0,0,0.46)"></span><span style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;color:#FFFFFF;text-align:center"><span style="font-size:15px;line-height:19px;letter-spacing:-0.01em;font-weight:700;white-space:nowrap">{{ nl.dateS }}</span><span style="font-size:26px;line-height:30px;letter-spacing:-0.02em;font-weight:800;white-space:nowrap">{{ nl.t24 }}</span></span></span>
                 <span style="flex:1;min-width:0;display:flex;flex-direction:column;padding:2px 0">
                   <span style="margin-top:2px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;max-width:182px;text-wrap:balance;font-size:17px;line-height:24px;letter-spacing:-0.022em;font-weight:700;color:#F7F7F8;word-break:keep-all">{{ nl.desc }}</span>
                   <span style="margin-top:auto;display:flex;align-items:center;gap:6px;min-width:0"><span style="flex-shrink:0;width:24px;height:24px;border-radius:99px;background-color:#202024;background-image:{{ nl.face }};background-size:cover;background-position:center"></span><span style="flex:1;min-width:0;font-size:15px;line-height:20px;letter-spacing:-0.018em;font-weight:600;color:rgba(255,255,255,0.72);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ nl.seller }}</span><button onClick="{{ nl.notify }}" style-active="opacity:.7" style="all:unset;cursor:pointer;flex-shrink:0;display:inline-flex;align-items:center;gap:4px;height:34px;padding:0 14px 0 12px;border-radius:99px;background:{{ nl.notifyBg }};font-size:14px;font-weight:700;color:{{ nl.notifyFg }};white-space:nowrap"><span style="width:16px;height:16px;display:block;background:currentColor;-webkit-mask:{{ nl.notifyMask }} center/contain no-repeat;mask:{{ nl.notifyMask }} center/contain no-repeat"></span>{{ nl.notifyLabel }}</button></span>
@@ -1254,7 +1255,7 @@
     </sc-if>
 
     <sc-if value="{{ mMyOpen }}" hint-placeholder-val="{{ false }}">
-      <div style="position:absolute;inset:0;z-index:55;background:#0F0F11;display:flex;flex-direction:column;padding-top:50px;overflow:hidden;animation:smUp .24s cubic-bezier(0.4,0,0.2,1)">
+      <div style="position:absolute;inset:0;z-index:55;background:#0F0F11;display:flex;flex-direction:column;padding-top:62px;overflow:hidden;animation:smUp .24s cubic-bezier(0.4,0,0.2,1)">
         <div style="position:absolute;top:0;left:0;right:0;z-index:6;height:102px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 10px 0 10px;backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);background:linear-gradient(to bottom, rgba(23,23,26,.96) 0%, rgba(23,23,26,.82) 52%, rgba(23,23,26,0) 100%);-webkit-mask-image:linear-gradient(to bottom, #000 0%, #000 62%, rgba(0,0,0,0) 100%);mask-image:linear-gradient(to bottom, #000 0%, #000 62%, rgba(0,0,0,0) 100%)">
           <span style="display:flex;align-items:center;margin-bottom:6px">
             <button onClick="{{ closeMMy }}" aria-label="닫기" style="all:unset;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center">
@@ -1489,7 +1490,7 @@
         </sc-if>
 
         <sc-if value="{{ mRankOpen }}" hint-placeholder-val="{{ false }}">
-          <div data-screen-label="라이브 인기랭킹" style="position:absolute;inset:0;z-index:8;background:#0F0F11;display:flex;flex-direction:column;padding-top:50px;animation:smFade .18s ease">
+          <div data-screen-label="라이브 인기랭킹" style="position:absolute;inset:0;z-index:8;background:#0F0F11;display:flex;flex-direction:column;padding-top:62px;animation:smFade .18s ease">
             <div style="flex-shrink:0;display:flex;align-items:center;gap:16px;height:52px;padding:0 6px 0 6px">
               <button onClick="{{ closeMRank }}" aria-label="뒤로" style="all:unset;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center"><span data-icon="chevron_left:regular" style="width:22px;height:22px;display:block;line-height:0;color:#F7F7F8;filter:drop-shadow(0 1px 3px rgba(0,0,0,.55))"></span></button>
               <sc-for list="{{ mRankTabs }}" as="rt" hint-placeholder-count="2">
@@ -2188,7 +2189,7 @@
 
     <!-- 서브: 숏챌몰 마이페이지 -->
     <sc-if value="{{ scShopMy }}" hint-placeholder-val="{{ false }}">
-      <div data-screen-label="숏챌몰 마이페이지" style="position:absolute;inset:0;z-index:35;display:flex;flex-direction:column;padding-top:50px;background:var(--seed-color-bg-layer-default)">
+      <div data-screen-label="숏챌몰 마이페이지" style="position:absolute;inset:0;z-index:35;display:flex;flex-direction:column;padding-top:62px;background:var(--seed-color-bg-layer-default)">
         <div style="display:flex;align-items:center;height:52px;padding:0 8px;justify-content:space-between;flex-shrink:0;background:var(--seed-color-bg-layer-default)">
           <button onClick="{{ back }}" aria-label="뒤로" style="width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;color:var(--seed-color-fg-neutral);cursor:pointer"><span data-icon="chevron_left" style="width:24px;height:24px"></span></button>
           <span style="font-size:var(--seed-font-size-t5);font-weight:700;color:var(--seed-color-fg-neutral)">쇼핑 마이페이지</span>
@@ -2259,7 +2260,7 @@
     <!-- 댓글 시트 -->
     <sc-if value="{{ commentsOpen }}" hint-placeholder-val="{{ false }}">
       <div style="position:absolute;inset:0;z-index:80">
-        <div onClick="{{ closeComments }}" style="position:absolute;top:50px;left:0;right:0;bottom:0;background:#000"></div>
+        <div onClick="{{ closeComments }}" style="position:absolute;top:62px;left:0;right:0;bottom:0;background:#000"></div>
         <div style="position:absolute;top:0;left:0;right:0;height:50px;background:#000;pointer-events:none"></div>
         <div style="position:absolute;top:56px;left:0;right:0;bottom:60%;display:flex;align-items:center;justify-content:center;padding:8px 0;animation:omFadeIn .22s ease">
           <span style="height:100%;aspect-ratio:3/4;max-width:88%;border-radius:16px;overflow:hidden;position:relative;display:block;background:#0E0E10">
@@ -2333,7 +2334,7 @@
 
     <!-- 서브: 검색 -->
     <sc-if value="{{ scSearch }}" hint-placeholder-val="{{ false }}">
-      <div data-screen-label="검색" style="position:absolute;inset:0;z-index:30;display:flex;flex-direction:column;padding-top:50px;background:var(--seed-color-bg-layer-default);animation:om-fade-in .2s ease-out both">
+      <div data-screen-label="검색" style="position:absolute;inset:0;z-index:30;display:flex;flex-direction:column;padding-top:62px;background:var(--seed-color-bg-layer-default);animation:om-fade-in .2s ease-out both">
         <div style="display:flex;align-items:center;gap:10px;height:58px;padding:0 16px 0 20px">
           <span style="flex:1;min-width:0;display:flex;align-items:center;gap:8px;height:40px;padding:0 13px;border-radius:12px;background:var(--seed-color-bg-layer-fill);transform-origin:right center;animation:om-searchbox-in .3s cubic-bezier(.2,.8,.3,1) both">
             <span data-icon="search" style="width:18px;height:18px;color:var(--seed-color-fg-neutral-muted);flex-shrink:0"></span>
@@ -2371,7 +2372,7 @@
 
     <!-- 첫 진입 스켈레톤 -->
     <sc-if value="{{ booting }}" hint-placeholder-val="{{ false }}">
-      <div data-screen-label="로딩" style="position:absolute;inset:0;z-index:45;background:#0F0F11;padding-top:50px;display:flex;flex-direction:column;animation:{{ bootAnim }}">
+      <div data-screen-label="로딩" style="position:absolute;inset:0;z-index:45;background:#0F0F11;padding-top:62px;display:flex;flex-direction:column;animation:{{ bootAnim }}">
         <div style="height:58px;flex-shrink:0"></div>
         <div style="flex:1;overflow:hidden;display:flex;flex-direction:column;animation:omShimmer 1.4s ease-in-out infinite">
           <span style="flex-shrink:0;margin:15px 20px 0 20px;height:197px;border-radius:16px;background:#19191C"></span>
@@ -2415,7 +2416,7 @@
     </sc-if>
 
     <sc-if value="{{ liveSearchOpen }}" hint-placeholder-val="{{ false }}">
-      <div data-screen-label="검색" style="position:absolute;inset:0;z-index:70;background:#0F0F11;padding-top:50px;display:flex;flex-direction:column;animation:smFade .18s ease">
+      <div data-screen-label="검색" style="position:absolute;inset:0;z-index:70;background:#0F0F11;padding-top:62px;display:flex;flex-direction:column;animation:smFade .18s ease">
         <div style="flex-shrink:0;display:flex;align-items:center;gap:12px;padding:8px 16px 12px 16px">
           <span style="flex:1;min-width:0;display:flex;align-items:center;gap:9px;height:44px;padding:0 14px;box-sizing:border-box;border-radius:8px;background:rgba(255,255,255,0.08)">
             <span data-icon="search:regular" style="flex-shrink:0;width:19px;height:19px;display:block;line-height:0;color:rgba(255,255,255,0.5)"></span>
@@ -2505,7 +2506,7 @@
     </sc-if>
 
     <sc-if value="{{ notifOpen }}" hint-placeholder-val="{{ false }}">
-      <div data-screen-label="알림" style="position:absolute;inset:0;z-index:70;background:#0F0F11;padding-top:50px;display:flex;flex-direction:column;animation:smFade .18s ease">
+      <div data-screen-label="알림" style="position:absolute;inset:0;z-index:70;background:#0F0F11;padding-top:62px;display:flex;flex-direction:column;animation:smFade .18s ease">
         <div style="flex-shrink:0;display:flex;align-items:center;gap:4px;height:52px;padding:0 12px">
           <button onClick="{{ closeNotif }}" aria-label="뒤로" style="all:unset;cursor:pointer;flex-shrink:0;width:40px;height:40px;display:flex;align-items:center;justify-content:center"><span data-icon="chevron_left:regular" style="width:22px;height:22px;display:block;line-height:0;color:#F7F7F8"></span></button>
           <span style="flex:1;min-width:0;text-align:center;font-size:18px;line-height:26px;letter-spacing:-0.002em;font-weight:700;color:#F7F7F8">알림</span>
@@ -2740,7 +2741,7 @@ class Component extends DCLogic {
         this._splashSeq = (this._splashSeq || 0) + 1;
         const my = this._splashSeq;
         clearTimeout(this._liveSkelT);
-        this.setState({ pdpSplash: true, liveSkel: true, mallOpen: false, mallSub: null, pdpOpen: false, mLiveOpen: false, mSheet: null, screens: [] });
+        this.setState({ pdpSplash: true, liveSkel: false, mallOpen: false, mallSub: null, pdpOpen: false, mLiveOpen: false, mSheet: null, screens: [] });
         // 스플래시가 걷힌 뒤 라이브 카드 스켈레톤 → 콘텐츠
         this._liveSkelT = setTimeout(() => this.setState({ liveSkel: false }), 1650);
         const srcs = ["assets/splash/bg.png", "assets/splash/logo2.png", "assets/splash/superweek-set.png"].map(x => this._A(x));
@@ -3422,7 +3423,7 @@ class Component extends DCLogic {
       ];
       const list = all.map(c => ({ img: c.img, face: c.face, seller: c.seller, title: c.title, isLive: !!c.isLive, isSched: !c.isLive, meta: c.isLive ? (c.viewersTxt || "") : (c.schedLabel || ""), go: c.go }))
         .concat(UP.map(u => ({ ...u, isLive: false, isSched: true, meta: u.when, go: () => this.showToast(u.when + " 방송 예정이에요") }))).slice(0, 1)
-        .map((c, i) => i === 0 ? { ...c, img: "url('assets/img4/hero-thumb-4.jpg')", bgImg: "url('assets/img4/sched-tv-2.png')", pos: "center" } : { ...c, pos: "center" })
+        .map((c, i) => i === 0 ? { ...c, img: "url('assets/img4/hero-thumb-4.jpg')", bgImg: "url('assets/img4/hero-thumb-4.jpg')", pos: "center" } : { ...c, pos: "center" })
         .map(c => ({ ...c, txtB: c.isSched ? "26px" : "20px" }));
       const n = list.length, idx = Math.min(S2.heroIdx || 0, Math.max(0, n - 1));
       v.heroCards = list; v.heroD = all.length ? "flex" : "none"; v.heroBgImg = n ? (list[idx].bgImg || list[idx].img) : "none";
