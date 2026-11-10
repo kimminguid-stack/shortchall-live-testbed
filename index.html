@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="숏챌 라이브">
 <style id="testbed-mobile">
 /* 테스트베드 전용: 휴대폰(폭 600px 이하)에서는 폰 프레임·가짜 상태바·홈바만 걷어내고
@@ -17,7 +17,12 @@
   [data-app-shell] { position: fixed !important; inset: 0 auto auto 0 !important; background: transparent !important; padding: 0 !important; min-height: 0 !important; height: var(--tb-h, 100dvh) !important; width: 100vw !important; display: block !important; overflow: hidden !important; }
   [data-app-shell] > div { width: 100vw !important; height: var(--tb-h, 100dvh) !important; overflow: hidden !important; }
   html body [data-app-shell] [data-screen-label="숏챌 앱"] {
-    width: 100vw !important; max-width: 100vw !important; height: var(--tb-h, 100dvh) !important; margin: 0 !important;
+    /* 시안 맨 위 54px(가짜 상태바 자리)는 실제 상태바가 대신하므로 화면 위로 올려 숨긴다.
+       페이지가 상태바 아래에서 시작하면(safe-area 0) 54px 전부, 상태바 밑까지 그려지면 그만큼 덜 올린다. */
+    --tb-top: max(0px, calc(54px - env(safe-area-inset-top, 0px)));
+    width: 100vw !important; max-width: 100vw !important;
+    height: calc(var(--tb-h, 100dvh) + var(--tb-top)) !important;
+    margin: calc(var(--tb-top) * -1) 0 0 0 !important;
     transform: none !important; border-radius: 0 !important; box-shadow: none !important;
   }
   [data-tb-hide] > * { visibility: hidden !important; }
@@ -29,7 +34,7 @@
     var standalone = window.navigator.standalone === true || (window.matchMedia && matchMedia('(display-mode: standalone)').matches);
     var portrait = window.innerHeight >= window.innerWidth;
     var screenH = portrait ? Math.max(screen.height, screen.width) : Math.min(screen.height, screen.width);
-    var h = standalone ? Math.max(window.innerHeight, screenH) : window.innerHeight;
+    var h = window.innerHeight;
     document.documentElement.style.setProperty('--tb-h', h + 'px');
   }
   setH();
@@ -46,7 +51,7 @@
 (function () {
   var last = '';
   function topColor() {
-    var x = Math.round(window.innerWidth / 2), y = 70;
+    var x = Math.round(window.innerWidth / 2), y = 12;
     var el = document.elementFromPoint(x, y);
     while (el && el !== document.documentElement) {
       var c = getComputedStyle(el).backgroundColor;
