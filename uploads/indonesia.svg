@@ -1,0 +1,21 @@
+<svg width="138" height="138" viewBox="0 0 138 138" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<mask id="mask0_3334_19450" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="138" height="138">
+<mask id="mask1_3334_19450" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="138" height="138">
+<path d="M0 137.86V0H137.87V137.86H0Z" fill="white"></path>
+</mask>
+<g mask="url(#mask1_3334_19450)">
+<path d="M68.92 137.86C30.84 137.86 0 107.03 0 68.95C0 30.87 30.84 0 68.92 0C107 0 137.88 30.87 137.88 68.95C137.88 107.03 107 137.86 68.92 137.86Z" fill="white"></path>
+</g>
+</mask>
+<g mask="url(#mask0_3334_19450)">
+<rect width="137.4" height="137.1" transform="matrix(1 0 0 -1 0 137.9)" fill="url(#pattern0_3334_19450)"></rect>
+</g>
+<path d="M131.59 68.9404H6.25C6.25 103.55 34.31 131.61 68.92 131.61C103.53 131.61 131.59 103.55 131.59 68.9404Z" fill="white"></path>
+<path d="M6.25 68.9405H131.59C131.59 34.3305 103.53 6.27051 68.92 6.27051C34.31 6.27051 6.25 34.3305 6.25 68.9405Z" fill="#DA081B"></path>
+<defs>
+<pattern id="pattern0_3334_19450" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_3334_19450" transform="scale(0.00219298)"></use>
+</pattern>
+<image id="image0_3334_19450" width="456" height="456" preserveAspectRatio="none"></image>
+</defs>
+</svg>
