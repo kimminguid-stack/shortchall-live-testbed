@@ -565,7 +565,7 @@
     @keyframes omProfileChrome { from { opacity: 0; } 40% { opacity: 0; } to { opacity: 1; } }
     image-slot[mini]::part(empty) { display: none !important; }
     image-slot[mini]::part(frame) { background: var(--seed-color-bg-layer-fill); }
-    image-slot[mini][dark]::part(frame) { background: #2C2C2E; }
+    image-slot[mini][dark]::part(frame) { background: #222224; }
     image-slot[dark]::part(frame) { background: #26262a; }
     image-slot[dark]::part(empty) { color: rgba(255,255,255,.7); justify-content: flex-start; padding-top: 26px; }
     image-slot[feed]::part(frame) { background: #26262a; }
@@ -593,17 +593,17 @@
   </style>
 <link rel="stylesheet" href="icons.css">
 </helmet>
-<div data-live-root="" style="position:absolute;inset:0;overflow:hidden;background:#18181A;color:#F7F7F8">
+<div data-live-root="" style="position:absolute;inset:0;overflow:hidden;background:#0F0F11;color:#F7F7F8">
 
     <div style="position:absolute;top:0;left:0;right:0;height:50px;z-index:70;pointer-events:none"></div>
 
 
     <!-- 숏챌몰 -->
     <sc-if value="{{ vShop }}" hint-placeholder-val="{{ false }}">
-      <div data-screen-label="숏챌 라이브" style="position:absolute;inset:0;display:flex;flex-direction:column;padding-top:50px;background:#18181A;color:#F7F7F8">
-        <div id="om-hero-bg" aria-hidden="true" style="position:absolute;left:0;right:0;top:0;height:620px;z-index:0;pointer-events:none;overflow:hidden;display:{{ heroD }};will-change:transform"><span style="position:absolute;inset:-80px;background-color:#2A2A2F;background-image:{{ heroBgImg }};background-size:cover;background-position:center;filter:blur(46px) saturate(1) brightness(.88);transform:scale(1.15);transition:background-image .6s ease"></span><span style="position:absolute;inset:0;background:linear-gradient(to bottom, rgba(24,24,26,.24) 0%, rgba(24,24,26,.40) 38%, rgba(24,24,26,.80) 72%, #18181A 96%)"></span></div>
+      <div data-screen-label="숏챌 라이브" style="position:absolute;inset:0;display:flex;flex-direction:column;padding-top:50px;background:#0F0F11;color:#F7F7F8">
+        <div id="om-hero-bg" aria-hidden="true" style="position:absolute;left:0;right:0;top:0;height:620px;z-index:0;pointer-events:none;overflow:hidden;display:{{ heroD }};will-change:transform"><span style="position:absolute;inset:-80px;background-color:#202024;background-image:{{ heroBgImg }};background-size:cover;background-position:center;filter:blur(46px) saturate(1) brightness(.88);transform:scale(1.15);transition:background-image .6s ease"></span><span style="position:absolute;inset:0;background:linear-gradient(to bottom, rgba(15,15,17,.24) 0%, rgba(15,15,17,.40) 38%, rgba(15,15,17,.80) 72%, #0F0F11 96%)"></span></div>
         <sc-if value="{{ fsOn }}" hint-placeholder-val="{{ false }}">
-          <div data-screen-label="더보기 풀스크린" style="position:absolute;inset:0;z-index:40;background:#18181A;display:flex;flex-direction:column;padding-top:50px;animation:smFade .18s ease">
+          <div data-screen-label="더보기 풀스크린" style="position:absolute;inset:0;z-index:40;background:#0F0F11;display:flex;flex-direction:column;padding-top:50px;animation:smFade .18s ease">
             <div style="flex-shrink:0;position:relative;display:flex;align-items:center;justify-content:center;height:52px;padding:0 52px">
               <button onClick="{{ closeFs }}" aria-label="뒤로" style-active="opacity:.6" style="all:unset;cursor:pointer;position:absolute;left:6px;top:6px;width:40px;height:40px;display:flex;align-items:center;justify-content:center"><span data-icon="chevron_left:regular" style="width:24px;height:24px;display:block;line-height:0;color:#F7F7F8"></span></button>
               <span style="font-size:18px;line-height:26px;font-weight:700;letter-spacing:-0.02em;color:#F7F7F8;white-space:nowrap">{{ fsTitle }}</span>
@@ -612,7 +612,7 @@
               <sc-if value="{{ fsClips }}" hint-placeholder-val="{{ false }}">
                 <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;padding-bottom:40px">
                   <sc-for list="{{ hlList }}" as="sv" hint-placeholder-count="9">
-                    <span onClick="{{ sv.open }}" style="position:relative;display:block;aspect-ratio:9/16;overflow:hidden;cursor:pointer;background-color:#2A2A2F;background-image:{{ sv.img }};background-size:cover;background-position:center">
+                    <span onClick="{{ sv.open }}" style="position:relative;display:block;aspect-ratio:9/16;overflow:hidden;cursor:pointer;background-color:#202024;background-image:{{ sv.img }};background-size:cover;background-position:center">
                       <span style="position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(to top, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 100%)"></span>
                       <span style="position:absolute;left:6px;bottom:6px;display:flex;align-items:center;gap:3px;font-size:12px;line-height:16px;font-weight:700;color:#fff"><span data-icon="view_count:regular" style="width:14px;height:14px;flex-shrink:0;display:block;line-height:0;color:#fff"></span>{{ sv.views }}</span>
                     </span>
@@ -623,7 +623,7 @@
                 <div style="display:flex;flex-direction:column;gap:20px;padding:12px 16px 40px">
                   <sc-for list="{{ schedAll }}" as="sl" hint-placeholder-count="6">
                     <span onClick="{{ sl.go }}" style="cursor:pointer;min-width:0;display:flex;align-items:center;gap:14px">
-                      <span style="flex-shrink:0;width:58px;height:58px;box-sizing:border-box;border-radius:11px;background:#252528;display:flex;flex-direction:column;align-items:center;justify-content:center">
+                      <span style="flex-shrink:0;width:58px;height:58px;box-sizing:border-box;border-radius:11px;background:#1A1A1D;display:flex;flex-direction:column;align-items:center;justify-content:center">
                         <span style="font-size:12px;line-height:16px;font-weight:700;color:#FC678A;white-space:nowrap">{{ sl.mon }}</span>
                         <span style="font-size:20px;line-height:26px;letter-spacing:-0.012em;font-weight:700;color:#F7F7F8;font-variant-numeric:tabular-nums">{{ sl.dd }}</span>
                       </span>
@@ -665,7 +665,7 @@
         <div id="om-hero" style="display:{{ heroD }};flex-direction:column;position:relative;margin-top:-6px">
           <div ref="{{ heroRef }}" style="display:flex;padding:0 16px;box-sizing:border-box">
             <sc-for list="{{ heroCards }}" as="h" hint-placeholder-count="3">
-              <button data-hero="" onClick="{{ h.go }}" aria-label="{{ h.title }}" style="all:unset;cursor:pointer;box-sizing:border-box;position:relative;flex:0 0 100%;max-width:100%;aspect-ratio:1/1;border-radius:28px;overflow:hidden;display:block;color:#fff;background-color:#2A2A2F;background-image:{{ h.img }};background-size:cover;background-position:{{ h.pos }};box-shadow:0 10px 30px rgba(0,0,0,.28)">
+              <button data-hero="" onClick="{{ h.go }}" aria-label="{{ h.title }}" style="all:unset;cursor:pointer;box-sizing:border-box;position:relative;flex:0 0 100%;max-width:100%;aspect-ratio:1/1;border-radius:28px;overflow:hidden;display:block;color:#fff;background-color:#202024;background-image:{{ h.img }};background-size:cover;background-position:{{ h.pos }};box-shadow:0 10px 30px rgba(0,0,0,.28)">
                 <span style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,.88) 0%, rgba(0,0,0,.68) 30%, rgba(0,0,0,.28) 56%, rgba(0,0,0,0) 74%)"></span>
                 <span style="position:absolute;left:16px;top:16px;display:flex;align-items:center">
                   <sc-if value="{{ h.isLive }}" hint-placeholder-val="{{ true }}">
@@ -681,7 +681,7 @@
                 <span style="position:absolute;left:20px;right:20px;bottom:{{ h.txtB }};display:flex;flex-direction:column-reverse;gap:10px">
                   <sc-if value="{{ h.isSched }}" hint-placeholder-val="{{ false }}"><span style="display:flex;align-items:center;gap:5px;min-width:0;margin-top:6px;padding-right:90px;font-size:15px;line-height:20px;letter-spacing:-0.018em;font-weight:700;color:#FFFFFF;text-shadow:0 1px 8px rgba(0,0,0,.45)"><span style="min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ h.meta }}</span></span></sc-if>
                   <span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;max-width:228px;font-size:20px;line-height:28px;letter-spacing:-0.025em;font-weight:800;color:#fff;word-break:keep-all;text-shadow:0 1px 10px rgba(0,0,0,.35)">{{ h.title }}</span>
-                  <span style="display:flex;align-items:center;gap:7px;min-width:0;font-size:14px;line-height:20px;letter-spacing:-0.018em;font-weight:700;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.3)"><span style="flex-shrink:0;width:22px;height:22px;border-radius:99px;background-color:#2A2A2F;background-image:{{ h.face }};background-size:cover;background-position:center"></span><span style="flex-shrink:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ h.seller }}</span></span>
+                  <span style="display:flex;align-items:center;gap:7px;min-width:0;font-size:14px;line-height:20px;letter-spacing:-0.018em;font-weight:700;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.3)"><span style="flex-shrink:0;width:22px;height:22px;border-radius:99px;background-color:#202024;background-image:{{ h.face }};background-size:cover;background-position:center"></span><span style="flex-shrink:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ h.seller }}</span></span>
                 </span>
               </button>
             </sc-for>
@@ -693,7 +693,7 @@
 
         <div id="om-sec-live" style="display:{{ liveSecD }};flex-direction:{{ liveDir }};gap:{{ liveGap }};align-items:flex-start;padding:0 16px;margin-bottom:-14px">
           <sc-if value="{{ liveSkel }}" hint-placeholder-val="{{ false }}">
-            <span ref="{{ skelRef }}" style="display:block;width:100%;aspect-ratio:3/4;border-radius:16px;background:#232327;overflow:hidden;position:relative">
+            <span ref="{{ skelRef }}" style="display:block;width:100%;aspect-ratio:3/4;border-radius:16px;background:#19191C;overflow:hidden;position:relative">
               <span style="position:absolute;left:12px;top:12px;width:168px;height:28px;border-radius:99px;background:rgba(255,255,255,.09)"></span>
               <span style="position:absolute;left:0;right:0;bottom:0;box-sizing:border-box;padding:16px 14px;display:flex;flex-direction:column;gap:14px;background:#1B1B1E;border-radius:16px">
                 <span style="display:flex;align-items:center;gap:10px"><span style="width:34px;height:34px;border-radius:99px;background:rgba(255,255,255,.09)"></span><span style="width:110px;height:16px;border-radius:6px;background:rgba(255,255,255,.09)"></span><span style="flex:1"></span><span style="width:86px;height:28px;border-radius:99px;background:rgba(255,255,255,.09)"></span></span>
@@ -705,8 +705,8 @@
           </sc-if>
           <sc-for list="{{ heroOffList }}" as="lv" hint-placeholder-count="2">
             <sc-if value="{{ cvBase }}" hint-placeholder-val="{{ true }}">
-            <span onClick="{{ lv.go }}" style="position:relative;display:flex;flex-direction:column;width:100%;border-radius:16px;overflow:hidden;cursor:{{ lv.cardCursor }};background-color:#121214">
-              <span style="display:block;width:100%;aspect-ratio:1/1;flex-shrink:0;background-color:#2A2A2F;background-image:{{ lv.img }};background-size:cover;background-repeat:no-repeat;background-position:center"></span>
+            <span onClick="{{ lv.go }}" style="position:relative;display:flex;flex-direction:column;width:100%;border-radius:16px;overflow:hidden;cursor:{{ lv.cardCursor }};background-color:#0B0B0D">
+              <span style="display:block;width:100%;aspect-ratio:1/1;flex-shrink:0;background-color:#202024;background-image:{{ lv.img }};background-size:cover;background-repeat:no-repeat;background-position:center"></span>
               <span style="position:absolute;left:0;right:0;top:0;aspect-ratio:1/1;pointer-events:none;background:linear-gradient(to top, rgba(0,0,0,0) 72%, rgba(0,0,0,.42) 100%)"></span>
               <span style="position:absolute;inset:0;z-index:30;border-radius:16px;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08);pointer-events:none"></span>
 
@@ -723,8 +723,8 @@
                                 </sc-if>
                 <sc-if value="{{ lv.badgeSched }}" hint-placeholder-val="{{ false }}">
                 <span style="display:inline-flex;align-items:center;gap:4px;height:24px;padding:0 10px 0 8px;border-radius:99px;background:#fff">
-                  <span style="flex-shrink:0;width:13px;height:13px;display:block;background:#18181A;-webkit-mask:url('assets/icons/icon_clock_regular.svg') center/contain no-repeat;mask:url('assets/icons/icon_clock_regular.svg') center/contain no-repeat"></span>
-                  <span style="font-size:12px;line-height:24px;letter-spacing:0.0252em;font-weight:700;color:#18181A;white-space:nowrap">방송 예정</span>
+                  <span style="flex-shrink:0;width:13px;height:13px;display:block;background:#0F0F11;-webkit-mask:url('assets/icons/icon_clock_regular.svg') center/contain no-repeat;mask:url('assets/icons/icon_clock_regular.svg') center/contain no-repeat"></span>
+                  <span style="font-size:12px;line-height:24px;letter-spacing:0.0252em;font-weight:700;color:#0F0F11;white-space:nowrap">방송 예정</span>
                 </span>
                 <span style="display:inline-flex;align-items:center;padding:0 10px 0 4px;font-size:12px;line-height:16px;letter-spacing:0;font-weight:700;color:#fff;white-space:nowrap">{{ lv.schedShort }}</span>
                 </sc-if>
@@ -738,7 +738,7 @@
 
 
               <span style="position:relative;z-index:2;margin-top:-40px;display:flex;flex-direction:column;align-items:flex-start;gap:12px">
-                <span style="box-sizing:border-box;width:100%;display:flex;flex-direction:column;gap:10px;padding:16px 14px 16px 14px;border-radius:16px;background:#25262A;border-top:1px solid rgba(255,255,255,0.08)">
+                <span style="box-sizing:border-box;width:100%;display:flex;flex-direction:column;gap:10px;padding:16px 14px 16px 14px;border-radius:16px;background:#1A1A1D;border-top:1px solid rgba(255,255,255,0.08)">
                   <sc-if value="{{ ivPromoChip }}" hint-placeholder-val="{{ false }}">
                     <span style="align-self:flex-start;display:inline-flex;align-items:center;padding:4px 12px;border-radius:99px;background:rgba(252,103,138,0.16);font-size:13px;line-height:18px;letter-spacing:0.0145em;font-weight:700;color:#FF9BB4;white-space:nowrap">{{ lv.promo }}</span>
                   </sc-if>
@@ -746,7 +746,7 @@
                     <span style="display:flex;flex-direction:column;gap:10px">
                       <span style="display:flex;align-items:center;gap:10px;min-width:0">
                         <span onClick="{{ lv.detail }}" style="cursor:pointer;flex:1;min-width:0;display:inline-flex;align-items:center;gap:10px">
-                          <span style="flex-shrink:0;width:34px;height:34px;border-radius:99px;background-color:#2A2A2F;background-image:{{ lv.face }};background-size:cover;background-position:center;display:block"></span>
+                          <span style="flex-shrink:0;width:34px;height:34px;border-radius:99px;background-color:#202024;background-image:{{ lv.face }};background-size:cover;background-position:center;display:block"></span>
                           <span style="min-width:0;display:block;font-size:15px;line-height:22px;letter-spacing:0.0096em;font-weight:700;color:#F7F7F8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span>
                         </span>
                         <span style="flex-shrink:0;display:inline-flex;align-items:center;gap:5px;padding:4px 12px;border-radius:99px;background:rgba(252,103,138,0.16);font-size:13px;line-height:18px;letter-spacing:0.0145em;font-weight:700;color:#FF9BB4;white-space:nowrap"><span style="flex-shrink:0;width:11px;height:14px;background-color:#FF9BB4;-webkit-mask:url('assets/icons/flame_hollow.svg') no-repeat center / contain;mask:url('assets/icons/flame_hollow.svg') no-repeat center / contain;display:block"></span>{{ lv.promo }}</span>
@@ -756,7 +756,7 @@
                   </sc-if>
                   <sc-if value="{{ iv1 }}" hint-placeholder-val="{{ true }}">
                     <span onClick="{{ lv.detail }}" style="cursor:pointer;display:flex;align-items:center;gap:12px">
-                      <span style="flex-shrink:0;width:46px;height:46px;border-radius:99px;background-color:#2A2A2F;background-image:{{ lv.face }};background-size:cover;background-position:center;display:block"></span>
+                      <span style="flex-shrink:0;width:46px;height:46px;border-radius:99px;background-color:#202024;background-image:{{ lv.face }};background-size:cover;background-position:center;display:block"></span>
                       <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
                         <span style="display:block;font-size:12px;line-height:16px;letter-spacing:0.0194em;font-weight:600;color:rgba(255,255,255,0.61);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span>
                         <span style="display:block;font-size:16px;line-height:24px;letter-spacing:0.0057em;font-weight:700;color:#F7F7F8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.title }}</span>
@@ -767,7 +767,7 @@
                     <span onClick="{{ lv.detail }}" style="cursor:pointer;display:flex;flex-direction:column;gap:7px">
                       <span style="display:block;font-size:15px;line-height:22px;letter-spacing:-0.022em;font-weight:700;color:#F7F7F8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.title }}</span>
                       <span style="display:flex;align-items:center;gap:8px;min-width:0;margin-top:1px">
-                        <span style="flex-shrink:0;width:22px;height:22px;border-radius:99px;background-color:#2A2A2F;background-image:{{ lv.face }};background-size:cover;background-position:center;display:block"></span>
+                        <span style="flex-shrink:0;width:22px;height:22px;border-radius:99px;background-color:#202024;background-image:{{ lv.face }};background-size:cover;background-position:center;display:block"></span>
                         <span style="flex:1;min-width:0;font-size:13px;line-height:18px;letter-spacing:0.0194em;font-weight:700;color:rgba(255,255,255,0.88);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span>
                       </span>
                     </span>
@@ -775,7 +775,7 @@
                   <sc-if value="{{ iv3 }}" hint-placeholder-val="{{ false }}">
                     <span onClick="{{ lv.detail }}" style="cursor:pointer;display:flex;flex-direction:column;gap:8px">
                       <span style="align-self:flex-start;max-width:100%;display:inline-flex;align-items:center;gap:7px;padding:3px 11px 3px 3px;border-radius:99px;background:rgba(255,255,255,0.08)">
-                        <span style="flex-shrink:0;width:22px;height:22px;border-radius:99px;background-color:#2A2A2F;background-image:{{ lv.face }};background-size:cover;background-position:center;display:block"></span>
+                        <span style="flex-shrink:0;width:22px;height:22px;border-radius:99px;background-color:#202024;background-image:{{ lv.face }};background-size:cover;background-position:center;display:block"></span>
                         <span style="min-width:0;font-size:12px;line-height:16px;letter-spacing:0.0252em;font-weight:700;color:rgba(255,255,255,0.88);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span>
                       </span>
                       <span style="display:flex;flex-direction:column;gap:3px">
@@ -794,7 +794,7 @@
                         <span style="display:block;font-size:15px;line-height:22px;letter-spacing:-0.022em;font-weight:700;color:#F7F7F8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.title }}</span>
                       </span>
                       <span style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;max-width:112px">
-                        <span style="display:block;width:48px;height:48px;border-radius:99px;background-color:#2A2A2F;background-image:{{ lv.face }};background-size:cover;background-position:center"></span>
+                        <span style="display:block;width:48px;height:48px;border-radius:99px;background-color:#202024;background-image:{{ lv.face }};background-size:cover;background-position:center"></span>
                         <span style="position:relative;margin-top:-9px;max-width:100%;display:inline-flex;align-items:center;height:20px;padding:0 8px;box-sizing:border-box;border-radius:99px;border:2px solid #1B1B1E;background:rgba(255,255,255,0.14);font-size:11px;line-height:16px;letter-spacing:0.0311em;font-weight:700;color:#F7F7F8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span>
                       </span>
                     </span>
@@ -802,7 +802,7 @@
                   <sc-if value="{{ iv6 }}" hint-placeholder-val="{{ false }}">
                     <span onClick="{{ lv.detail }}" style="cursor:pointer;display:flex;align-items:center;gap:14px">
                       <span style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:5px;max-width:96px">
-                        <span style="display:block;width:40px;height:40px;border-radius:99px;background-color:#2A2A2F;background-image:{{ lv.face }};background-size:cover;background-position:center"></span>
+                        <span style="display:block;width:40px;height:40px;border-radius:99px;background-color:#202024;background-image:{{ lv.face }};background-size:cover;background-position:center"></span>
                         <span style="max-width:100%;display:block;font-size:11px;line-height:14px;letter-spacing:0.0311em;letter-spacing:0.0311em;font-weight:700;color:rgba(255,255,255,0.61);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span>
                       </span>
                       <span style="flex-shrink:0;align-self:stretch;width:1px;background:rgba(255,255,255,0.12)"></span>
@@ -825,7 +825,7 @@
             </sc-if>
             <sc-if value="{{ cvA }}" hint-placeholder-val="{{ false }}">
             <span onClick="{{ lv.go }}" style="position:relative;display:{{ cardDisp }};flex-direction:column;flex:{{ cardFlex }};min-width:0;width:100%;aspect-ratio:{{ cardAR }};border-radius:16px;overflow:hidden;cursor:{{ lv.cardCursor }};background:{{ cardBg }}"><span style="position:absolute;inset:0;z-index:6;display:{{ lv.liveStrokeD }};border-radius:inherit;box-shadow:inset 0 0 0 2px #FF3200;pointer-events:none"></span>
-              <span style="position:{{ imgPos }};z-index:1;inset:{{ imgInset }};width:100%;aspect-ratio:1/1;border-radius:{{ imgRadius }};overflow:hidden;display:block;background-color:#2A2A2F;background-image:{{ lv.img }};background-size:cover;background-position:center">
+              <span style="position:{{ imgPos }};z-index:1;inset:{{ imgInset }};width:100%;aspect-ratio:1/1;border-radius:{{ imgRadius }};overflow:hidden;display:block;background-color:#202024;background-image:{{ lv.img }};background-size:cover;background-position:center">
                 <span style="position:absolute;inset:0;background:{{ imgGrad }}"></span><span style="position:absolute;inset:0;z-index:5;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.16);pointer-events:none"></span>
                 <span style="position:absolute;left:{{ bdgInset }};top:{{ bdgInset }};z-index:3;display:{{ lv.badgeWrapD }};align-items:center;gap:0;padding:0;border-radius:{{ lv.badgeWrapR }};overflow:hidden;background:{{ lv.badgeWrapBg }}">
                 <sc-if value="{{ lv.badgeLive }}" hint-placeholder-val="{{ true }}">
@@ -849,46 +849,46 @@
               </span>
               <sc-if value="{{ al1 }}" hint-placeholder-val="{{ true }}">
               <span style="position:absolute;z-index:2;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:14px;padding:0 14px 14px 14px">
-                <span style="display:flex;flex-direction:column;gap:8px;padding:0 2px"><span style="display:flex;align-items:center;gap:10px;min-width:0"><span style="flex-shrink:0;width:46px;height:46px;border-radius:99px;box-shadow:0 0 0 2px #FFFFFF;margin:2px;background-color:#2A2A2F;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="min-width:0;font-size:16px;line-height:22px;font-weight:700;color:#E1E1E2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span></span><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:20px;line-height:28px;letter-spacing:-0.012em;font-weight:700;color:#fff;word-break:keep-all;text-align:left">{{ lv.title }}</span></span>
-                <sc-if value="{{ lv.isLive }}" hint-placeholder-val="{{ true }}"><button onClick="{{ lv.go }}" style-active="opacity:.72" style="all:unset;cursor:pointer;box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:50px;border-radius:13px;background:#FFFFFF;font-size:15px;line-height:20px;letter-spacing:-0.02em;font-weight:800;color:#18181A">라이브 시청하기</button></sc-if><sc-if value="{{ lv.isSched }}" hint-placeholder-val="{{ false }}"><span style="box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:50px;border-radius:13px;background:rgba(24,24,28,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-size:15px;line-height:20px;font-weight:700;color:rgba(255,255,255,0.88)">{{ lv.schedLabel }}</span></sc-if>
+                <span style="display:flex;flex-direction:column;gap:8px;padding:0 2px"><span style="display:flex;align-items:center;gap:10px;min-width:0"><span style="flex-shrink:0;width:46px;height:46px;border-radius:99px;box-shadow:0 0 0 2px #FFFFFF;margin:2px;background-color:#202024;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="min-width:0;font-size:16px;line-height:22px;font-weight:700;color:#E1E1E2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span></span><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:20px;line-height:28px;letter-spacing:-0.012em;font-weight:700;color:#fff;word-break:keep-all;text-align:left">{{ lv.title }}</span></span>
+                <sc-if value="{{ lv.isLive }}" hint-placeholder-val="{{ true }}"><button onClick="{{ lv.go }}" style-active="opacity:.72" style="all:unset;cursor:pointer;box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:50px;border-radius:13px;background:#FFFFFF;font-size:15px;line-height:20px;letter-spacing:-0.02em;font-weight:800;color:#0F0F11">라이브 시청하기</button></sc-if><sc-if value="{{ lv.isSched }}" hint-placeholder-val="{{ false }}"><span style="box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:50px;border-radius:13px;background:rgba(24,24,28,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-size:15px;line-height:20px;font-weight:700;color:rgba(255,255,255,0.88)">{{ lv.schedLabel }}</span></sc-if>
               </span>
               </sc-if>
               <sc-if value="{{ al4 }}" hint-placeholder-val="{{ false }}">
               <span style="position:absolute;z-index:2;left:0;right:0;bottom:0;display:flex;flex-direction:column;align-items:center;gap:28px;padding:0 14px 20px 14px">
-                <span style="display:flex;flex-direction:column;align-items:center;gap:8px;padding:0 12px"><span style="flex-shrink:0;width:56px;height:56px;border-radius:99px;box-shadow:0 0 0 2px #FFFFFF;margin:2px;background-color:#2A2A2F;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="min-width:0;font-size:13px;line-height:20px;font-weight:700;color:#BABABC;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:20px;line-height:28px;letter-spacing:-0.012em;font-weight:700;color:#fff;word-break:keep-all;text-align:center">{{ lv.title }}</span></span>
-                <sc-if value="{{ lv.isLive }}" hint-placeholder-val="{{ true }}"><button onClick="{{ lv.go }}" style-active="opacity:.72" style="all:unset;cursor:pointer;box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:50px;border-radius:13px;background:#FFFFFF;font-size:15px;line-height:20px;letter-spacing:-0.02em;font-weight:800;color:#18181A">라이브 시청하기</button></sc-if><sc-if value="{{ lv.isSched }}" hint-placeholder-val="{{ false }}"><span style="box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:50px;border-radius:13px;background:rgba(24,24,28,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-size:15px;line-height:20px;font-weight:700;color:rgba(255,255,255,0.88)">{{ lv.schedLabel }}</span></sc-if>
+                <span style="display:flex;flex-direction:column;align-items:center;gap:8px;padding:0 12px"><span style="flex-shrink:0;width:56px;height:56px;border-radius:99px;box-shadow:0 0 0 2px #FFFFFF;margin:2px;background-color:#202024;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="min-width:0;font-size:13px;line-height:20px;font-weight:700;color:#BABABC;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:20px;line-height:28px;letter-spacing:-0.012em;font-weight:700;color:#fff;word-break:keep-all;text-align:center">{{ lv.title }}</span></span>
+                <sc-if value="{{ lv.isLive }}" hint-placeholder-val="{{ true }}"><button onClick="{{ lv.go }}" style-active="opacity:.72" style="all:unset;cursor:pointer;box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:50px;border-radius:13px;background:#FFFFFF;font-size:15px;line-height:20px;letter-spacing:-0.02em;font-weight:800;color:#0F0F11">라이브 시청하기</button></sc-if><sc-if value="{{ lv.isSched }}" hint-placeholder-val="{{ false }}"><span style="box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:50px;border-radius:13px;background:rgba(24,24,28,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-size:15px;line-height:20px;font-weight:700;color:rgba(255,255,255,0.88)">{{ lv.schedLabel }}</span></sc-if>
               </span>
               </sc-if>
               <sc-if value="{{ al11 }}" hint-placeholder-val="{{ false }}">
               <span style="position:relative;z-index:2;display:flex;flex-direction:column;gap:16px;padding:16px 4px 4px 4px">
-                <span style="display:flex;align-items:center;gap:12px;min-width:0"><span style="flex-shrink:0;width:40px;height:40px;border-radius:99px;box-shadow:0 0 0 2px #FFFFFF;margin:2px;background-color:#2A2A2F;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px"><span style="font-size:14px;line-height:20px;font-weight:600;color:#9D9DA0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:18px;line-height:25px;letter-spacing:-0.012em;font-weight:700;color:#F7F7F8;word-break:keep-all">{{ lv.title }}</span></span></span>
-                <sc-if value="{{ lv.isLive }}" hint-placeholder-val="{{ true }}"><button onClick="{{ lv.go }}" style-active="opacity:.72" style="all:unset;cursor:pointer;box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:50px;border-radius:13px;background:#FFFFFF;font-size:15px;line-height:20px;letter-spacing:-0.02em;font-weight:800;color:#18181A">라이브 시청하기</button></sc-if><sc-if value="{{ lv.isSched }}" hint-placeholder-val="{{ false }}"><span style="box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:50px;border-radius:13px;background:#2A2B2F;font-size:15px;line-height:20px;font-weight:700;color:#BABABC">{{ lv.schedLabel }}</span></sc-if>
+                <span style="display:flex;align-items:center;gap:12px;min-width:0"><span style="flex-shrink:0;width:40px;height:40px;border-radius:99px;box-shadow:0 0 0 2px #FFFFFF;margin:2px;background-color:#202024;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px"><span style="font-size:14px;line-height:20px;font-weight:600;color:#9D9DA0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:18px;line-height:25px;letter-spacing:-0.012em;font-weight:700;color:#F7F7F8;word-break:keep-all">{{ lv.title }}</span></span></span>
+                <sc-if value="{{ lv.isLive }}" hint-placeholder-val="{{ true }}"><button onClick="{{ lv.go }}" style-active="opacity:.72" style="all:unset;cursor:pointer;box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:50px;border-radius:13px;background:#FFFFFF;font-size:15px;line-height:20px;letter-spacing:-0.02em;font-weight:800;color:#0F0F11">라이브 시청하기</button></sc-if><sc-if value="{{ lv.isSched }}" hint-placeholder-val="{{ false }}"><span style="box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:50px;border-radius:13px;background:#2A2B2F;font-size:15px;line-height:20px;font-weight:700;color:#BABABC">{{ lv.schedLabel }}</span></sc-if>
               </span>
               </sc-if>
-              <sc-if value="{{ al12 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:0;right:0;top:{{ pnTop }};bottom:0;z-index:0;display:{{ pnD }};overflow:hidden;border-radius:{{ pnRad }};background:{{ pnBg }};box-shadow:{{ pnBd }}"><span style="position:absolute;inset:-40px;display:{{ pnBlurD }};background-image:{{ lv.img }};background-size:cover;background-position:center bottom;filter:blur(30px) saturate(0.2);opacity:.88"></span><span style="position:absolute;inset:0;display:{{ pnBlurD }};background:linear-gradient(to bottom, rgba(23,23,26,.68) 0%, rgba(23,23,26,.86) 100%)"></span></span><span style="position:relative;z-index:2;display:flex;flex-direction:column;padding:{{ infoPad }}"><span style="display:flex;align-items:center;gap:9px;min-width:0"><span style="flex-shrink:0;width:{{ avSz }};height:{{ avSz }};border-radius:99px;box-shadow:0 0 0 1.5px #FFFFFF;margin:1.5px;background-color:#2A2A2F;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="flex:1;min-width:0;font-size:{{ sellerFs }};line-height:20px;letter-spacing:-0.01em;font-weight:700;color:#E1E1E2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span><sc-if value="{{ lv.isLive }}" hint-placeholder-val="{{ true }}"><span style="flex-shrink:0;display:{{ joinD }};align-items:center;gap:1px;height:28px;padding:0;margin-right:9px;font-size:14px;line-height:20px;letter-spacing:-0.01em;font-weight:700;color:#FFFFFF;white-space:nowrap">라이브 참여하기<span style="flex-shrink:0;display:block;width:15px;height:15px;margin-left:3px;background:#FFFFFF;-webkit-mask:url('assets/icons/icon_arrow_right_line.svg') center/contain no-repeat;mask:url('assets/icons/icon_arrow_right_line.svg') center/contain no-repeat"></span></span></sc-if><sc-if value="{{ lv.isSched }}" hint-placeholder-val="{{ false }}"><button onClick="{{ lv.notify }}" style-active="opacity:.7" style="all:unset;cursor:pointer;flex-shrink:0;display:inline-flex;align-items:center;gap:4px;height:34px;padding:0 12px;border-radius:9px;background:{{ lv.notifyBg }};font-size:14px;font-weight:700;color:{{ lv.notifyFg }};white-space:nowrap"><span style="width:16px;height:16px;display:block;background:currentColor;-webkit-mask:{{ lv.notifyMask }} center/contain no-repeat;mask:{{ lv.notifyMask }} center/contain no-repeat"></span>{{ lv.notifyLabel }}</button></sc-if></span></span></sc-if>
-              <sc-if value="{{ al13 }}" hint-placeholder-val="{{ false }}"><span style="position:relative;z-index:2;display:flex;flex-direction:column;gap:8px;padding:14px 2px 4px"><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:18px;line-height:25px;letter-spacing:-0.012em;font-weight:700;color:#F7F7F8;word-break:keep-all;text-align:left">{{ lv.title }}</span><span style="display:flex;align-items:center;gap:7px;min-width:0"><span style="flex-shrink:0;width:22px;height:22px;border-radius:99px;background-color:#2A2A2F;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="min-width:0;font-size:13px;line-height:20px;font-weight:600;color:#9D9DA0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span></span></span></sc-if>
-              <sc-if value="{{ al14 }}" hint-placeholder-val="{{ false }}"><span style="position:relative;z-index:2;display:flex;flex-direction:column;gap:8px;padding:14px 2px 4px"><span style="display:flex;align-items:center;gap:8px;min-width:0"><span style="flex-shrink:0;width:26px;height:26px;border-radius:99px;background-color:#2A2A2F;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="min-width:0;font-size:14px;line-height:20px;font-weight:600;color:#BABABC;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span></span><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:19px;line-height:27px;letter-spacing:-0.012em;font-weight:700;color:#F7F7F8;word-break:keep-all;text-align:left">{{ lv.title }}</span></span></sc-if>
-              <sc-if value="{{ al15 }}" hint-placeholder-val="{{ false }}"><span style="position:relative;z-index:2;display:flex;align-items:center;gap:14px;padding:14px 2px 4px"><span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:4px"><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:18px;line-height:25px;letter-spacing:-0.012em;font-weight:700;color:#F7F7F8;word-break:keep-all;text-align:left">{{ lv.title }}</span><span style="min-width:0;font-size:13px;line-height:20px;font-weight:600;color:#9D9DA0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span></span><span style="flex-shrink:0;width:48px;height:48px;border-radius:99px;box-shadow:0 0 0 1.5px rgba(255,255,255,.9);background-color:#2A2A2F;background-image:{{ lv.face }};background-size:cover;background-position:center"></span></span></sc-if>
-              <sc-if value="{{ al16 }}" hint-placeholder-val="{{ false }}"><span style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:6px;padding:16px 12px 4px"><span style="flex-shrink:0;width:56px;height:56px;border-radius:99px;box-shadow:0 0 0 3px #18181A;background-color:#2A2A2F;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="min-width:0;font-size:13px;line-height:20px;font-weight:600;color:#BABABC;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:18px;line-height:25px;letter-spacing:-0.012em;font-weight:700;color:#F7F7F8;word-break:keep-all;text-align:center">{{ lv.title }}</span></span></sc-if>
-              <sc-if value="{{ al17 }}" hint-placeholder-val="{{ false }}"><span style="position:relative;z-index:2;display:flex;flex-direction:column;gap:8px;padding:14px 2px 4px"><span style="display:flex;align-items:flex-end;gap:10px;min-width:0"><span style="flex-shrink:0;width:48px;height:48px;border-radius:99px;box-shadow:0 0 0 3px #18181A;background-color:#2A2A2F;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="padding-bottom:4px;min-width:0;display:flex"><span style="min-width:0;font-size:14px;line-height:20px;font-weight:700;color:#E1E1E2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span></span></span><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:18px;line-height:25px;letter-spacing:-0.012em;font-weight:700;color:#F7F7F8;word-break:keep-all;text-align:left">{{ lv.title }}</span></span></sc-if>
-              <sc-if value="{{ al18 }}" hint-placeholder-val="{{ false }}"><span style="position:relative;z-index:2;display:flex;align-items:center;gap:12px;margin-top:10px;padding:14px;border-radius:14px;background:#1F2023"><span style="flex-shrink:0;width:40px;height:40px;border-radius:99px;background-color:#2A2A2F;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="min-width:0;font-size:13px;line-height:20px;font-weight:600;color:#9D9DA0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:16px;line-height:23px;letter-spacing:-0.012em;font-weight:700;color:#F7F7F8;word-break:keep-all;text-align:left">{{ lv.title }}</span></span></span></sc-if>
-              <sc-if value="{{ al19 }}" hint-placeholder-val="{{ false }}"><span style="position:relative;z-index:2;display:flex;flex-direction:column;gap:6px;padding:14px 2px 4px"><span style="display:flex;align-items:center;gap:6px;min-width:0"><span style="flex-shrink:0;width:18px;height:18px;border-radius:99px;background-color:#2A2A2F;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="min-width:0;font-size:13px;line-height:20px;font-weight:700;color:#FF8FAB;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span></span><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:20px;line-height:28px;letter-spacing:-0.012em;font-weight:700;color:#F7F7F8;word-break:keep-all;text-align:left">{{ lv.title }}</span></span></sc-if>
-              <sc-if value="{{ al20 }}" hint-placeholder-val="{{ false }}"><span style="position:relative;z-index:2;display:flex;flex-direction:column;gap:12px;padding:14px 2px 4px"><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:20px;line-height:28px;letter-spacing:-0.012em;font-weight:700;color:#F7F7F8;word-break:keep-all;text-align:left">{{ lv.title }}</span><span style="display:block;height:1px;background:rgba(255,255,255,.08)"></span><span style="display:flex;align-items:center;gap:8px;min-width:0"><span style="flex-shrink:0;width:28px;height:28px;border-radius:99px;background-color:#2A2A2F;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="min-width:0;font-size:14px;line-height:20px;font-weight:600;color:#BABABC;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span></span></span></sc-if>
-              <sc-if value="{{ al21 }}" hint-placeholder-val="{{ false }}"><span style="position:relative;z-index:2;display:flex;align-items:center;gap:12px;padding:14px 2px 4px"><span style="flex-shrink:0;padding:2px;border-radius:99px;background:linear-gradient(135deg,#F44E99,#FC678A 50%,#FF855E);display:flex"><span style="display:flex;padding:2px;border-radius:99px;background:#18181A"><span style="flex-shrink:0;width:38px;height:38px;border-radius:99px;background-color:#2A2A2F;background-image:{{ lv.face }};background-size:cover;background-position:center"></span></span></span><span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="min-width:0;font-size:14px;line-height:20px;font-weight:700;color:#E1E1E2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:16px;line-height:23px;letter-spacing:-0.012em;font-weight:700;color:#F7F7F8;word-break:keep-all;text-align:left">{{ lv.title }}</span></span></span></sc-if>
+              <sc-if value="{{ al12 }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:0;right:0;top:{{ pnTop }};bottom:0;z-index:0;display:{{ pnD }};overflow:hidden;border-radius:{{ pnRad }};background:{{ pnBg }};box-shadow:{{ pnBd }}"><span style="position:absolute;inset:-40px;display:{{ pnBlurD }};background-image:{{ lv.img }};background-size:cover;background-position:center bottom;filter:blur(30px) saturate(0.2);opacity:.88"></span><span style="position:absolute;inset:0;display:{{ pnBlurD }};background:linear-gradient(to bottom, rgba(23,23,26,.68) 0%, rgba(23,23,26,.86) 100%)"></span></span><span style="position:relative;z-index:2;display:flex;flex-direction:column;padding:{{ infoPad }}"><span style="display:flex;align-items:center;gap:9px;min-width:0"><span style="flex-shrink:0;width:{{ avSz }};height:{{ avSz }};border-radius:99px;box-shadow:0 0 0 1.5px #FFFFFF;margin:1.5px;background-color:#202024;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="flex:1;min-width:0;font-size:{{ sellerFs }};line-height:20px;letter-spacing:-0.01em;font-weight:700;color:#E1E1E2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span><sc-if value="{{ lv.isLive }}" hint-placeholder-val="{{ true }}"><span style="flex-shrink:0;display:{{ joinD }};align-items:center;gap:1px;height:28px;padding:0;margin-right:9px;font-size:14px;line-height:20px;letter-spacing:-0.01em;font-weight:700;color:#FFFFFF;white-space:nowrap">라이브 참여하기<span style="flex-shrink:0;display:block;width:15px;height:15px;margin-left:3px;background:#FFFFFF;-webkit-mask:url('assets/icons/icon_arrow_right_line.svg') center/contain no-repeat;mask:url('assets/icons/icon_arrow_right_line.svg') center/contain no-repeat"></span></span></sc-if><sc-if value="{{ lv.isSched }}" hint-placeholder-val="{{ false }}"><button onClick="{{ lv.notify }}" style-active="opacity:.7" style="all:unset;cursor:pointer;flex-shrink:0;display:inline-flex;align-items:center;gap:4px;height:34px;padding:0 12px;border-radius:9px;background:{{ lv.notifyBg }};font-size:14px;font-weight:700;color:{{ lv.notifyFg }};white-space:nowrap"><span style="width:16px;height:16px;display:block;background:currentColor;-webkit-mask:{{ lv.notifyMask }} center/contain no-repeat;mask:{{ lv.notifyMask }} center/contain no-repeat"></span>{{ lv.notifyLabel }}</button></sc-if></span></span></sc-if>
+              <sc-if value="{{ al13 }}" hint-placeholder-val="{{ false }}"><span style="position:relative;z-index:2;display:flex;flex-direction:column;gap:8px;padding:14px 2px 4px"><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:18px;line-height:25px;letter-spacing:-0.012em;font-weight:700;color:#F7F7F8;word-break:keep-all;text-align:left">{{ lv.title }}</span><span style="display:flex;align-items:center;gap:7px;min-width:0"><span style="flex-shrink:0;width:22px;height:22px;border-radius:99px;background-color:#202024;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="min-width:0;font-size:13px;line-height:20px;font-weight:600;color:#9D9DA0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span></span></span></sc-if>
+              <sc-if value="{{ al14 }}" hint-placeholder-val="{{ false }}"><span style="position:relative;z-index:2;display:flex;flex-direction:column;gap:8px;padding:14px 2px 4px"><span style="display:flex;align-items:center;gap:8px;min-width:0"><span style="flex-shrink:0;width:26px;height:26px;border-radius:99px;background-color:#202024;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="min-width:0;font-size:14px;line-height:20px;font-weight:600;color:#BABABC;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span></span><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:19px;line-height:27px;letter-spacing:-0.012em;font-weight:700;color:#F7F7F8;word-break:keep-all;text-align:left">{{ lv.title }}</span></span></sc-if>
+              <sc-if value="{{ al15 }}" hint-placeholder-val="{{ false }}"><span style="position:relative;z-index:2;display:flex;align-items:center;gap:14px;padding:14px 2px 4px"><span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:4px"><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:18px;line-height:25px;letter-spacing:-0.012em;font-weight:700;color:#F7F7F8;word-break:keep-all;text-align:left">{{ lv.title }}</span><span style="min-width:0;font-size:13px;line-height:20px;font-weight:600;color:#9D9DA0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span></span><span style="flex-shrink:0;width:48px;height:48px;border-radius:99px;box-shadow:0 0 0 1.5px rgba(255,255,255,.9);background-color:#202024;background-image:{{ lv.face }};background-size:cover;background-position:center"></span></span></sc-if>
+              <sc-if value="{{ al16 }}" hint-placeholder-val="{{ false }}"><span style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:6px;padding:16px 12px 4px"><span style="flex-shrink:0;width:56px;height:56px;border-radius:99px;box-shadow:0 0 0 3px #0F0F11;background-color:#202024;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="min-width:0;font-size:13px;line-height:20px;font-weight:600;color:#BABABC;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:18px;line-height:25px;letter-spacing:-0.012em;font-weight:700;color:#F7F7F8;word-break:keep-all;text-align:center">{{ lv.title }}</span></span></sc-if>
+              <sc-if value="{{ al17 }}" hint-placeholder-val="{{ false }}"><span style="position:relative;z-index:2;display:flex;flex-direction:column;gap:8px;padding:14px 2px 4px"><span style="display:flex;align-items:flex-end;gap:10px;min-width:0"><span style="flex-shrink:0;width:48px;height:48px;border-radius:99px;box-shadow:0 0 0 3px #0F0F11;background-color:#202024;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="padding-bottom:4px;min-width:0;display:flex"><span style="min-width:0;font-size:14px;line-height:20px;font-weight:700;color:#E1E1E2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span></span></span><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:18px;line-height:25px;letter-spacing:-0.012em;font-weight:700;color:#F7F7F8;word-break:keep-all;text-align:left">{{ lv.title }}</span></span></sc-if>
+              <sc-if value="{{ al18 }}" hint-placeholder-val="{{ false }}"><span style="position:relative;z-index:2;display:flex;align-items:center;gap:12px;margin-top:10px;padding:14px;border-radius:14px;background:#1F2023"><span style="flex-shrink:0;width:40px;height:40px;border-radius:99px;background-color:#202024;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="min-width:0;font-size:13px;line-height:20px;font-weight:600;color:#9D9DA0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:16px;line-height:23px;letter-spacing:-0.012em;font-weight:700;color:#F7F7F8;word-break:keep-all;text-align:left">{{ lv.title }}</span></span></span></sc-if>
+              <sc-if value="{{ al19 }}" hint-placeholder-val="{{ false }}"><span style="position:relative;z-index:2;display:flex;flex-direction:column;gap:6px;padding:14px 2px 4px"><span style="display:flex;align-items:center;gap:6px;min-width:0"><span style="flex-shrink:0;width:18px;height:18px;border-radius:99px;background-color:#202024;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="min-width:0;font-size:13px;line-height:20px;font-weight:700;color:#FF8FAB;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span></span><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:20px;line-height:28px;letter-spacing:-0.012em;font-weight:700;color:#F7F7F8;word-break:keep-all;text-align:left">{{ lv.title }}</span></span></sc-if>
+              <sc-if value="{{ al20 }}" hint-placeholder-val="{{ false }}"><span style="position:relative;z-index:2;display:flex;flex-direction:column;gap:12px;padding:14px 2px 4px"><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:20px;line-height:28px;letter-spacing:-0.012em;font-weight:700;color:#F7F7F8;word-break:keep-all;text-align:left">{{ lv.title }}</span><span style="display:block;height:1px;background:rgba(255,255,255,.08)"></span><span style="display:flex;align-items:center;gap:8px;min-width:0"><span style="flex-shrink:0;width:28px;height:28px;border-radius:99px;background-color:#202024;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="min-width:0;font-size:14px;line-height:20px;font-weight:600;color:#BABABC;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span></span></span></sc-if>
+              <sc-if value="{{ al21 }}" hint-placeholder-val="{{ false }}"><span style="position:relative;z-index:2;display:flex;align-items:center;gap:12px;padding:14px 2px 4px"><span style="flex-shrink:0;padding:2px;border-radius:99px;background:linear-gradient(135deg,#F44E99,#FC678A 50%,#FF855E);display:flex"><span style="display:flex;padding:2px;border-radius:99px;background:#0F0F11"><span style="flex-shrink:0;width:38px;height:38px;border-radius:99px;background-color:#202024;background-image:{{ lv.face }};background-size:cover;background-position:center"></span></span></span><span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="min-width:0;font-size:14px;line-height:20px;font-weight:700;color:#E1E1E2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span><span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:16px;line-height:23px;letter-spacing:-0.012em;font-weight:700;color:#F7F7F8;word-break:keep-all;text-align:left">{{ lv.title }}</span></span></span></sc-if>
               <span style="position:absolute;inset:0;z-index:30;display:{{ cardFrameD }};border-radius:16px;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08);pointer-events:none"></span>
             </span>
             </sc-if>
             <sc-if value="{{ cvB }}" hint-placeholder-val="{{ false }}">
             <span onClick="{{ lv.go }}" style="position:relative;display:flex;align-items:stretch;gap:14px;width:100%;box-sizing:border-box;padding:12px;border-radius:16px;cursor:{{ lv.cardCursor }};background:rgba(255,255,255,0.08)">
-              <span style="position:relative;flex-shrink:0;display:block;width:118px;height:118px;border-radius:12px;overflow:hidden;background-color:#2A2A2F;background-image:{{ lv.img }};background-size:cover;background-position:center">
+              <span style="position:relative;flex-shrink:0;display:block;width:118px;height:118px;border-radius:12px;overflow:hidden;background-color:#202024;background-image:{{ lv.img }};background-size:cover;background-position:center">
                 <span style="position:absolute;left:8px;top:8px;z-index:3;display:{{ lv.badgeWrapD }};align-items:center;gap:6px;padding:3px;border-radius:99px;background:rgba(23,23,26,.44)">
                 <sc-if value="{{ lv.isLive }}" hint-placeholder-val="{{ true }}"><span style="display:inline-flex;align-items:center;gap:4px;height:20px;padding:0 9px 0 7px;border-radius:99px;background:#FC678A"><span style="display:block;width:6px;height:6px;border-radius:99px;background:#fff;animation:smLiveDot 1s cubic-bezier(0.4,0,0.2,1) infinite"></span><span style="font-size:11px;line-height:20px;font-weight:700;color:#fff;white-space:nowrap">실시간</span></span></sc-if>
-                <sc-if value="{{ lv.isSched }}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center;height:20px;padding:0 9px;border-radius:99px;background:#fff;font-size:11px;line-height:20px;font-weight:700;color:#18181A;white-space:nowrap">방송 예정</span></sc-if>
+                <sc-if value="{{ lv.isSched }}" hint-placeholder-val="{{ false }}"><span style="display:inline-flex;align-items:center;height:20px;padding:0 9px;border-radius:99px;background:#fff;font-size:11px;line-height:20px;font-weight:700;color:#0F0F11;white-space:nowrap">방송 예정</span></sc-if>
               </span>
               </span>
               <span style="flex:1;min-width:0;display:flex;flex-direction:column;justify-content:space-between;gap:8px;padding:2px 0">
                 <span style="display:flex;flex-direction:column;gap:6px;min-width:0">
-                  <span style="display:flex;align-items:center;gap:6px;min-width:0"><span style="flex-shrink:0;width:20px;height:20px;border-radius:99px;background-color:#2A2A2F;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="min-width:0;font-size:13px;line-height:18px;font-weight:600;color:rgba(255,255,255,.61);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span></span>
+                  <span style="display:flex;align-items:center;gap:6px;min-width:0"><span style="flex-shrink:0;width:20px;height:20px;border-radius:99px;background-color:#202024;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="min-width:0;font-size:13px;line-height:18px;font-weight:600;color:rgba(255,255,255,.61);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span></span>
                   <span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:16px;line-height:24px;letter-spacing:0.0057em;font-weight:700;color:#F7F7F8;word-break:keep-all">{{ lv.title }}</span>
                 </span>
                 <span style="display:flex;align-items:center;justify-content:space-between;gap:8px">
@@ -900,8 +900,8 @@
             </span>
             </sc-if>
             <sc-if value="{{ cvC }}" hint-placeholder-val="{{ false }}">
-            <span onClick="{{ lv.go }}" style="position:relative;display:flex;flex-direction:column;width:100%;border-radius:16px;overflow:hidden;cursor:{{ lv.cardCursor }};background:#121214">
-              <span style="position:relative;display:block;width:100%;aspect-ratio:1/1;background-color:#2A2A2F;background-image:{{ lv.img }};background-size:cover;background-position:center">
+            <span onClick="{{ lv.go }}" style="position:relative;display:flex;flex-direction:column;width:100%;border-radius:16px;overflow:hidden;cursor:{{ lv.cardCursor }};background:#0B0B0D">
+              <span style="position:relative;display:block;width:100%;aspect-ratio:1/1;background-color:#202024;background-image:{{ lv.img }};background-size:cover;background-position:center">
                 <span style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 78%, rgba(0,0,0,.4) 100%)"></span>
                 <span style="position:absolute;left:{{ bdgInset }};top:{{ bdgInset }};z-index:3;display:{{ lv.badgeWrapD }};align-items:center;gap:6px;padding:3px;border-radius:99px;background:rgba(23,23,26,.44)">
                 <sc-if value="{{ lv.badgeLive }}" hint-placeholder-val="{{ true }}">
@@ -916,8 +916,8 @@
                                 </sc-if>
                 <sc-if value="{{ lv.badgeSched }}" hint-placeholder-val="{{ false }}">
                 <span style="display:inline-flex;align-items:center;gap:4px;height:24px;padding:0 10px 0 8px;border-radius:99px;background:#fff">
-                  <span style="flex-shrink:0;width:13px;height:13px;display:block;background:#18181A;-webkit-mask:url('assets/icons/icon_clock_regular.svg') center/contain no-repeat;mask:url('assets/icons/icon_clock_regular.svg') center/contain no-repeat"></span>
-                  <span style="font-size:12px;line-height:24px;letter-spacing:0.0252em;font-weight:700;color:#18181A;white-space:nowrap">방송 예정</span>
+                  <span style="flex-shrink:0;width:13px;height:13px;display:block;background:#0F0F11;-webkit-mask:url('assets/icons/icon_clock_regular.svg') center/contain no-repeat;mask:url('assets/icons/icon_clock_regular.svg') center/contain no-repeat"></span>
+                  <span style="font-size:12px;line-height:24px;letter-spacing:0.0252em;font-weight:700;color:#0F0F11;white-space:nowrap">방송 예정</span>
                 </span>
                 <span style="display:inline-flex;align-items:center;padding:0 10px 0 4px;font-size:12px;line-height:16px;letter-spacing:0;font-weight:700;color:#fff;white-space:nowrap">{{ lv.schedShort }}</span>
                 </sc-if>
@@ -932,13 +932,13 @@
                   <sc-for list="{{ lv.prods }}" as="pd" hint-placeholder-count="3">
                     <span style="flex:1;min-width:0;display:flex;align-items:center;gap:8px;padding:6px;border-radius:12px;background:rgba(255,255,255,.94);box-shadow:0 4px 14px rgba(0,0,0,.25)">
                       <span style="flex-shrink:0;width:38px;height:38px;border-radius:8px;background-color:#EEE;background-image:{{ pd.img }};background-size:cover;background-position:center"></span>
-                      <span style="min-width:0;display:flex;flex-direction:column"><span style="font-size:12px;line-height:16px;font-weight:700;color:#FC3F6E">{{ pd.off }}</span><span style="font-size:13px;line-height:17px;font-weight:700;color:#18181A;white-space:nowrap;font-variant-numeric:tabular-nums">{{ pd.price }}</span></span>
+                      <span style="min-width:0;display:flex;flex-direction:column"><span style="font-size:12px;line-height:16px;font-weight:700;color:#FC3F6E">{{ pd.off }}</span><span style="font-size:13px;line-height:17px;font-weight:700;color:#0F0F11;white-space:nowrap;font-variant-numeric:tabular-nums">{{ pd.price }}</span></span>
                     </span>
                   </sc-for>
                 </span>
               </span>
               <span style="display:flex;flex-direction:column;gap:12px;padding:14px">
-                <span style="display:flex;align-items:center;gap:10px;min-width:0"><span style="flex-shrink:0;width:34px;height:34px;border-radius:99px;background-color:#2A2A2F;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="flex:1;min-width:0;display:flex;flex-direction:column"><span style="font-size:13px;line-height:18px;font-weight:600;color:rgba(255,255,255,.61);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span><span style="font-size:15px;line-height:22px;letter-spacing:-0.022em;font-weight:700;color:#F7F7F8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.title }}</span></span></span>
+                <span style="display:flex;align-items:center;gap:10px;min-width:0"><span style="flex-shrink:0;width:34px;height:34px;border-radius:99px;background-color:#202024;background-image:{{ lv.face }};background-size:cover;background-position:center"></span><span style="flex:1;min-width:0;display:flex;flex-direction:column"><span style="font-size:13px;line-height:18px;font-weight:600;color:rgba(255,255,255,.61);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.seller }}</span><span style="font-size:15px;line-height:22px;letter-spacing:-0.022em;font-weight:700;color:#F7F7F8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lv.title }}</span></span></span>
                 <sc-if value="{{ lv.isLive }}" hint-placeholder-val="{{ true }}"><button onClick="{{ lv.go }}" style-active="opacity:.72" style="all:unset;cursor:pointer;box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:46px;border-radius:12px;background:#FC678A;font-size:15px;line-height:20px;letter-spacing:-0.02em;font-weight:800;color:#fff">참여하기</button></sc-if><sc-if value="{{ lv.isSched }}" hint-placeholder-val="{{ false }}"><span style="box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:46px;border-radius:12px;background:rgba(255,255,255,0.10);font-size:15px;line-height:20px;font-weight:700;color:rgba(255,255,255,0.61);font-variant-numeric:tabular-nums">{{ lv.schedLabel }}</span></sc-if>
               </span>
               <span style="position:absolute;inset:0;z-index:30;border-radius:16px;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08);pointer-events:none"></span>
@@ -946,14 +946,14 @@
             </sc-if>
           </sc-for>
           <sc-if value="{{ nextLivesOn }}" hint-placeholder-val="{{ true }}">
-          <div style="display:flex;flex-direction:column;gap:10px;align-self:stretch;margin-top:-24px">
-            <span style="display:block;margin-bottom:8px;font-size:19px;line-height:26px;letter-spacing:-0.022em;font-weight:700;color:#F7F7F8;word-break:keep-all">다음 라이브</span>
+          <div style="display:flex;flex-direction:column;gap:20px;align-self:stretch;margin-top:-24px">
+            <span style="display:block;margin-bottom:-2px;font-size:19px;line-height:26px;letter-spacing:-0.022em;font-weight:700;color:#F7F7F8;word-break:keep-all">다음 라이브</span>
             <sc-for list="{{ nextLives }}" as="nl" hint-placeholder-count="3">
-              <span style="width:100%;box-sizing:border-box;display:flex;gap:12px;padding:8px 10px 8px 8px;border-radius:22px;background:#252528">
-                <span style="position:relative;flex-shrink:0;width:124px;height:124px;border-radius:14px;overflow:hidden;background-color:#2A2A2F;background-image:{{ nl.img }};background-size:cover;background-position:center"><span style="position:absolute;inset:0;background:rgba(0,0,0,0.46)"></span><span style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;color:#FFFFFF;text-align:center"><span style="font-size:13px;line-height:17px;letter-spacing:-0.01em;font-weight:700;white-space:nowrap">{{ nl.dateS }}</span><span style="font-size:22px;line-height:26px;letter-spacing:-0.02em;font-weight:800;white-space:nowrap">{{ nl.t24 }}</span></span></span>
+              <span style="width:100%;box-sizing:border-box;display:flex;gap:14px;padding:0;background:transparent">
+                <span style="position:relative;flex-shrink:0;width:124px;height:124px;border-radius:16px;overflow:hidden;background-color:#202024;background-image:{{ nl.img }};background-size:cover;background-position:center"><span style="position:absolute;inset:0;background:rgba(0,0,0,0.46)"></span><span style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;color:#FFFFFF;text-align:center"><span style="font-size:13px;line-height:17px;letter-spacing:-0.01em;font-weight:700;white-space:nowrap">{{ nl.dateS }}</span><span style="font-size:22px;line-height:26px;letter-spacing:-0.02em;font-weight:800;white-space:nowrap">{{ nl.t24 }}</span></span></span>
                 <span style="flex:1;min-width:0;display:flex;flex-direction:column;padding:2px 0">
                   <span style="margin-top:2px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;max-width:160px;text-wrap:balance;font-size:15px;line-height:22px;letter-spacing:-0.022em;font-weight:700;color:#F7F7F8;word-break:keep-all">{{ nl.desc }}</span>
-                  <span style="margin-top:auto;display:flex;align-items:center;gap:6px;min-width:0"><span style="flex-shrink:0;width:20px;height:20px;border-radius:99px;background-color:#2A2A2F;background-image:{{ nl.face }};background-size:cover;background-position:center"></span><span style="flex:1;min-width:0;font-size:13px;line-height:18px;font-weight:600;color:rgba(255,255,255,0.64);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ nl.seller }}</span><button onClick="{{ nl.notify }}" style-active="opacity:.7" style="all:unset;cursor:pointer;flex-shrink:0;display:inline-flex;align-items:center;gap:4px;height:34px;padding:0 14px 0 12px;border-radius:99px;background:{{ nl.notifyBg }};font-size:14px;font-weight:700;color:{{ nl.notifyFg }};white-space:nowrap"><span style="width:16px;height:16px;display:block;background:currentColor;-webkit-mask:{{ nl.notifyMask }} center/contain no-repeat;mask:{{ nl.notifyMask }} center/contain no-repeat"></span>{{ nl.notifyLabel }}</button></span>
+                  <span style="margin-top:auto;display:flex;align-items:center;gap:6px;min-width:0"><span style="flex-shrink:0;width:20px;height:20px;border-radius:99px;background-color:#202024;background-image:{{ nl.face }};background-size:cover;background-position:center"></span><span style="flex:1;min-width:0;font-size:13px;line-height:18px;font-weight:600;color:rgba(255,255,255,0.64);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ nl.seller }}</span><button onClick="{{ nl.notify }}" style-active="opacity:.7" style="all:unset;cursor:pointer;flex-shrink:0;display:inline-flex;align-items:center;gap:4px;height:34px;padding:0 14px 0 12px;border-radius:99px;background:{{ nl.notifyBg }};font-size:14px;font-weight:700;color:{{ nl.notifyFg }};white-space:nowrap"><span style="width:16px;height:16px;display:block;background:currentColor;-webkit-mask:{{ nl.notifyMask }} center/contain no-repeat;mask:{{ nl.notifyMask }} center/contain no-repeat"></span>{{ nl.notifyLabel }}</button></span>
                 </span>
               </span>
             </sc-for>
@@ -1007,7 +1007,7 @@
           <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 12px;padding:0 16px">
             <sc-for list="{{ schedItems }}" as="sc" hint-placeholder-count="2">
               <span onClick="{{ sc.go }}" style="cursor:pointer;min-width:0;display:flex;flex-direction:column;gap:10px">
-                <span style="display:block;width:100%;aspect-ratio:1/1;border-radius:16px;overflow:hidden;background-color:#2A2A2F;background-image:{{ sc.img }};background-size:cover;background-position:center 25%"></span>
+                <span style="display:block;width:100%;aspect-ratio:1/1;border-radius:16px;overflow:hidden;background-color:#202024;background-image:{{ sc.img }};background-size:cover;background-position:center 25%"></span>
                 <span style="display:flex;flex-direction:column;gap:4px;min-width:0">
                   <span style="display:flex;flex-direction:column;font-size:15px;line-height:22px;letter-spacing:-0.022em;font-weight:700;color:#F7F7F8;white-space:nowrap"><span>{{ sc.whenDate }}</span><span>{{ sc.whenTime }}</span></span>
                   <span style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;line-height:19px;letter-spacing:-0.002em;font-weight:500;color:rgba(255,255,255,0.61);word-break:keep-all">{{ sc.title }}</span>
@@ -1037,7 +1037,7 @@
           <div style="display:flex;flex-direction:column;gap:16px;padding:0 16px">
             <sc-for list="{{ schedListItems }}" as="sl" hint-placeholder-count="1">
               <span onClick="{{ sl.go }}" style="cursor:pointer;min-width:0;display:flex;align-items:center;gap:14px">
-                <span style="flex-shrink:0;width:58px;height:58px;box-sizing:border-box;border-radius:11px;background:#252528;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0">
+                <span style="flex-shrink:0;width:58px;height:58px;box-sizing:border-box;border-radius:11px;background:#1A1A1D;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0">
                   <span style="font-size:12px;line-height:16px;letter-spacing:0;font-weight:700;color:#FC678A;white-space:nowrap">{{ sl.mon }}</span>
                   <span style="font-size:20px;line-height:26px;letter-spacing:-0.012em;font-weight:700;color:#F7F7F8;font-variant-numeric:tabular-nums">{{ sl.dd }}</span>
                 </span>
@@ -1049,7 +1049,7 @@
             </sc-for>
             <sc-for list="{{ schedListPast }}" as="sp" hint-placeholder-count="2">
               <span onClick="{{ sp.go }}" style="cursor:pointer;min-width:0;display:flex;flex-direction:column;gap:10px">
-                <span style="display:block;width:100%;aspect-ratio:1/1;border-radius:16px;overflow:hidden;background-color:#2A2A2F;background-image:{{ sp.img }};background-size:cover;background-position:center 25%"></span>
+                <span style="display:block;width:100%;aspect-ratio:1/1;border-radius:16px;overflow:hidden;background-color:#202024;background-image:{{ sp.img }};background-size:cover;background-position:center 25%"></span>
                 <span style="display:flex;flex-direction:column;gap:4px;min-width:0">
                   <span style="display:flex;flex-direction:column;font-size:15px;line-height:22px;letter-spacing:-0.022em;font-weight:700;color:#F7F7F8;white-space:nowrap"><span>{{ sp.whenDate }}</span><span>{{ sp.whenTime }}</span></span>
                   <span style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;line-height:19px;letter-spacing:-0.002em;font-weight:500;color:rgba(255,255,255,0.61);word-break:keep-all">{{ sp.title }}</span>
@@ -1069,7 +1069,7 @@
           </div>
           <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:0 16px">
             <sc-for list="{{ hlPeek }}" as="sv" hint-placeholder-count="6">
-              <span onClick="{{ sv.open }}" style="position:relative;display:block;aspect-ratio:9/16;overflow:hidden;border-radius:14px;cursor:pointer;background-color:#2A2A2F;background-image:{{ sv.img }};background-size:cover;background-position:center">
+              <span onClick="{{ sv.open }}" style="position:relative;display:block;aspect-ratio:9/16;overflow:hidden;border-radius:14px;cursor:pointer;background-color:#202024;background-image:{{ sv.img }};background-size:cover;background-position:center">
                 <span style="position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(to top, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 100%)"></span>
                 <span style="position:absolute;left:6px;bottom:6px;display:flex;align-items:center;gap:3px;font-size:12px;line-height:16px;letter-spacing:0;font-weight:700;color:#fff"><span data-icon="view_count:regular" style="width:14px;height:14px;flex-shrink:0;display:block;line-height:0;color:#fff"></span>{{ sv.views }}</span>
               </span>
@@ -1080,7 +1080,7 @@
         <div id="om-sec-shorts" style="display:{{ pgShortsD }};flex-direction:column;margin-top:{{ hlGridMt }};transition:{{ hlGridTr }}">
           <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px">
             <sc-for list="{{ hlList }}" as="sv" hint-placeholder-count="9">
-              <span onClick="{{ sv.open }}" style="position:relative;display:block;aspect-ratio:9/16;overflow:hidden;cursor:pointer;background-color:#2A2A2F;background-image:{{ sv.img }};background-size:cover;background-position:center">
+              <span onClick="{{ sv.open }}" style="position:relative;display:block;aspect-ratio:9/16;overflow:hidden;cursor:pointer;background-color:#202024;background-image:{{ sv.img }};background-size:cover;background-position:center">
                 <span style="position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(to top, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 100%)"></span>
                 <span style="position:absolute;left:6px;bottom:6px;display:flex;align-items:center;gap:3px;font-size:12px;line-height:16px;letter-spacing:0;font-weight:700;color:#fff"><span data-icon="view_count:regular" style="width:14px;height:14px;flex-shrink:0;display:block;line-height:0;color:#fff"></span>{{ sv.views }}</span>
               </span>
@@ -1096,7 +1096,7 @@
           <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px 10px;padding:0 16px">
               <sc-for list="{{ dealItems }}" as="p" hint-placeholder-count="6">
                 <span onClick="{{ openPdp }}" style="cursor:pointer;min-width:0;display:flex;flex-direction:column;gap:9px">
-                  <span style="display:block;width:100%;aspect-ratio:1/1;border-radius:14px;background-color:#2A2A2F;background-image:{{ p.img }};background-size:cover;background-position:center"></span>
+                  <span style="display:block;width:100%;aspect-ratio:1/1;border-radius:14px;background-color:#202024;background-image:{{ p.img }};background-size:cover;background-position:center"></span>
                   <span style="display:flex;flex-direction:column;gap:2px;min-width:0">
                     <span style="font-size:14px;line-height:20px;color:#BABABC;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ p.name }}</span>
                     <span style="display:flex;align-items:baseline;gap:5px"><span style="font-size:16px;line-height:22px;font-weight:700;color:#FF3200">{{ p.off }}</span><span style="font-size:16px;line-height:22px;font-weight:700;color:#F7F7F8">{{ p.price }}</span></span>
@@ -1118,7 +1118,7 @@
           <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px 10px;padding:0 16px">
               <sc-for list="{{ newItems }}" as="p" hint-placeholder-count="6">
                 <span onClick="{{ openPdp }}" style="cursor:pointer;min-width:0;display:flex;flex-direction:column;gap:9px">
-                  <span style="position:relative;display:block;width:100%;aspect-ratio:1/1;border-radius:14px;background-color:#2A2A2F;background-image:{{ p.img }};background-size:cover;background-position:center"><span style="position:absolute;left:8px;top:8px;display:inline-flex;align-items:center;height:22px;padding:0 7px;border-radius:4px;background:rgba(0,0,0,0.62);font-size:12px;font-weight:700;color:#FFFFFF;white-space:nowrap">{{ p.time }}</span></span>
+                  <span style="position:relative;display:block;width:100%;aspect-ratio:1/1;border-radius:14px;background-color:#202024;background-image:{{ p.img }};background-size:cover;background-position:center"><span style="position:absolute;left:8px;top:8px;display:inline-flex;align-items:center;height:22px;padding:0 7px;border-radius:4px;background:rgba(0,0,0,0.62);font-size:12px;font-weight:700;color:#FFFFFF;white-space:nowrap">{{ p.time }}</span></span>
                   <span style="display:flex;flex-direction:column;gap:2px;min-width:0">
                     <span style="font-size:14px;line-height:20px;color:#BABABC;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ p.name }}</span>
                     <span style="display:flex;align-items:baseline;gap:5px"><span style="font-size:16px;line-height:22px;font-weight:700;color:#FF3200">{{ p.off }}</span><span style="font-size:16px;line-height:22px;font-weight:700;color:#F7F7F8">{{ p.price }}</span></span>
@@ -1152,7 +1152,7 @@
           <sc-for list="{{ newsPosts }}" as="np" hint-placeholder-count="2">
             <div style="display:flex;flex-direction:column;gap:12px">
               <div style="display:flex;align-items:center;gap:10px;padding:0 8px 0 16px">
-                <span style="flex-shrink:0;width:40px;height:40px;border-radius:99px;background-color:#2A2A2F;background-image:{{ np.face }};background-size:cover;background-position:center;display:block"></span>
+                <span style="flex-shrink:0;width:40px;height:40px;border-radius:99px;background-color:#202024;background-image:{{ np.face }};background-size:cover;background-position:center;display:block"></span>
                 <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
                   <span style="font-size:15px;line-height:20px;letter-spacing:0.0096em;font-weight:700;color:#F7F7F8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ np.name }}</span>
                   <span style="font-size:12px;line-height:16px;letter-spacing:0.0252em;color:rgba(255,255,255,0.5)">{{ np.time }}</span>
@@ -1166,7 +1166,7 @@
                 </sc-if>
               </div>
               <div style="padding:0 16px">
-                <span style="display:block;width:100%;aspect-ratio:1/1;border-radius:12px;background-color:#2A2A2F;background-image:{{ np.img }};background-size:cover;background-position:center"></span>
+                <span style="display:block;width:100%;aspect-ratio:1/1;border-radius:12px;background-color:#202024;background-image:{{ np.img }};background-size:cover;background-position:center"></span>
               </div>
             </div>
           </sc-for>
@@ -1179,7 +1179,7 @@
           <div style="display:flex;gap:10px;overflow-x:auto;padding:0 16px;scroll-padding:0 16px;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch">
             <sc-for list="{{ newPreview }}" as="p" hint-placeholder-count="6">
               <span onClick="{{ openPdp }}" style="cursor:pointer;flex:0 0 136px;width:136px;scroll-snap-align:start;display:flex;flex-direction:column;gap:10px">
-                <span style="position:relative;display:block;width:100%;aspect-ratio:1/1;border-radius:14px;overflow:hidden;background-color:#2A2A2F;background-image:{{ p.img }};background-size:cover;background-position:center"></span>
+                <span style="position:relative;display:block;width:100%;aspect-ratio:1/1;border-radius:14px;overflow:hidden;background-color:#202024;background-image:{{ p.img }};background-size:cover;background-position:center"></span>
                 <span style="display:flex;flex-direction:column;min-width:0;padding:0 2px">
                   <span style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;line-height:19px;letter-spacing:-0.002em;font-weight:500;color:rgba(255,255,255,0.82)">{{ p.name }}</span>
                   <span style="display:block;margin-top:6px;font-size:12px;line-height:16px;letter-spacing:-0.01em;font-weight:400;color:rgba(255,255,255,0.4);text-decoration:line-through;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ p.listPrice }}</span>
@@ -1203,7 +1203,7 @@
           <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:20px 8px;padding:0 16px">
             <sc-for list="{{ mShopItems }}" as="p" hint-placeholder-count="6">
               <span onClick="{{ openPdp }}" style="cursor:pointer;min-width:0;display:flex;flex-direction:column;gap:10px">
-                <span style="position:relative;display:block;width:100%;aspect-ratio:1/1;border-radius:12px;overflow:hidden;background-color:#2A2A2F;background-image:{{ p.img }};background-size:cover;background-position:center">
+                <span style="position:relative;display:block;width:100%;aspect-ratio:1/1;border-radius:12px;overflow:hidden;background-color:#202024;background-image:{{ p.img }};background-size:cover;background-position:center">
                 </span>
                 <span style="display:flex;flex-direction:column;min-width:0;padding:0 2px">
                   <span style="display:block;margin-bottom:3px;font-size:12px;line-height:16px;letter-spacing:-0.01em;font-weight:500;color:rgba(255,255,255,0.48);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ p.seller }}</span>
@@ -1254,7 +1254,7 @@
     </sc-if>
 
     <sc-if value="{{ mMyOpen }}" hint-placeholder-val="{{ false }}">
-      <div style="position:absolute;inset:0;z-index:55;background:#18181A;display:flex;flex-direction:column;padding-top:50px;overflow:hidden;animation:smUp .24s cubic-bezier(0.4,0,0.2,1)">
+      <div style="position:absolute;inset:0;z-index:55;background:#0F0F11;display:flex;flex-direction:column;padding-top:50px;overflow:hidden;animation:smUp .24s cubic-bezier(0.4,0,0.2,1)">
         <div style="position:absolute;top:0;left:0;right:0;z-index:6;height:102px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 10px 0 10px;backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);background:linear-gradient(to bottom, rgba(23,23,26,.96) 0%, rgba(23,23,26,.82) 52%, rgba(23,23,26,0) 100%);-webkit-mask-image:linear-gradient(to bottom, #000 0%, #000 62%, rgba(0,0,0,0) 100%);mask-image:linear-gradient(to bottom, #000 0%, #000 62%, rgba(0,0,0,0) 100%)">
           <span style="display:flex;align-items:center;margin-bottom:6px">
             <button onClick="{{ closeMMy }}" aria-label="닫기" style="all:unset;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center">
@@ -1270,7 +1270,7 @@
 
         <div style="flex:1;min-height:0;overflow-y:auto;scrollbar-width:none;padding:64px 0 32px 0;display:flex;flex-direction:column;gap:24px">
           <div style="display:flex;align-items:center;gap:14px;padding:12px 16px 0 16px">
-            <span style="flex-shrink:0;width:64px;height:64px;border-radius:99px;background-color:#2A2A2F;background-image:url('assets/img3/face1.jpg');background-size:cover;background-position:center"></span>
+            <span style="flex-shrink:0;width:64px;height:64px;border-radius:99px;background-color:#202024;background-image:url('assets/img3/face1.jpg');background-size:cover;background-position:center"></span>
             <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:8px">
               <span style="display:block;font-size:22px;line-height:30px;font-weight:700;letter-spacing:-0.43px;color:#F7F7F8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">매너있는 김민구</span>
             </span>
@@ -1307,7 +1307,7 @@
             <div style="display:flex;gap:12px;overflow-x:auto;scrollbar-width:none;padding:0 16px">
               <sc-for list="{{ mCrossSell }}" as="p" hint-placeholder-count="4">
                 <span style="flex-shrink:0;width:130px;display:flex;flex-direction:column;gap:8px">
-                  <span style="display:block;width:130px;height:130px;border-radius:10px;background-color:#2A2A2F;background-image:{{ p.img }};background-size:cover;background-position:center"></span>
+                  <span style="display:block;width:130px;height:130px;border-radius:10px;background-color:#202024;background-image:{{ p.img }};background-size:cover;background-position:center"></span>
                   <span style="display:block;font-size:12px;line-height:16px;color:rgba(255,255,255,0.88);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ p.name }}</span>
                   <span style="display:block;font-size:14px;line-height:20px;font-weight:700;color:#F7F7F8">{{ p.price }}</span>
                 </span>
@@ -1364,7 +1364,7 @@
                   <sc-if value="{{ tv9 }}" hint-placeholder-val="{{ true }}">
                     <span style="display:flex;flex-direction:column;gap:8px;padding:8px">
                       <span style="display:flex;align-items:flex-start;gap:10px">
-                        <span onClick="{{ ti.tap }}" style="cursor:pointer;flex-shrink:0;width:52px;height:52px;border-radius:8px;background-color:#2A2A2F;background-image:{{ ti.img }};background-size:cover;background-position:center;display:block"></span>
+                        <span onClick="{{ ti.tap }}" style="cursor:pointer;flex-shrink:0;width:52px;height:52px;border-radius:8px;background-color:#202024;background-image:{{ ti.img }};background-size:cover;background-position:center;display:block"></span>
                         <span onClick="{{ ti.tap }}" style="cursor:pointer;flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
                           <span style="display:block;font-size:13px;line-height:17px;font-weight:500;color:#F7F7F8;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">{{ ti.name }}</span>
                           <span style="display:flex;align-items:center;gap:6px"><span style="flex-shrink:0;white-space:nowrap;font-size:14px;line-height:19px;font-weight:800;color:#FC678A">{{ ti.off }}</span><span style="flex-shrink:0;white-space:nowrap;font-size:15px;line-height:20px;font-weight:800;color:#fff">{{ ti.price }}</span></span>
@@ -1376,7 +1376,7 @@
                   </sc-if>
                   <sc-if value="{{ tv10 }}" hint-placeholder-val="{{ false }}">
                     <span style="display:flex;align-items:stretch;gap:10px;padding:8px">
-                      <span onClick="{{ ti.tap }}" style="cursor:pointer;flex-shrink:0;align-self:stretch;aspect-ratio:1/1;min-height:66px;border-radius:8px;background-color:#2A2A2F;background-image:{{ ti.img }};background-size:cover;background-position:center;display:block"></span>
+                      <span onClick="{{ ti.tap }}" style="cursor:pointer;flex-shrink:0;align-self:stretch;aspect-ratio:1/1;min-height:66px;border-radius:8px;background-color:#202024;background-image:{{ ti.img }};background-size:cover;background-position:center;display:block"></span>
                       <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:4px">
                         <span onClick="{{ ti.tap }}" style="cursor:pointer;display:block;font-size:13px;line-height:17px;font-weight:500;color:#F7F7F8;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical">{{ ti.name }}</span>
                         <span onClick="{{ ti.tap }}" style="cursor:pointer;display:flex;align-items:center;gap:6px"><span style="flex-shrink:0;white-space:nowrap;font-size:14px;line-height:19px;font-weight:800;color:#FC678A">{{ ti.off }}</span><span style="flex-shrink:0;white-space:nowrap;font-size:15px;line-height:20px;font-weight:800;color:#fff">{{ ti.price }}</span></span>
@@ -1396,7 +1396,7 @@
               <span style="flex-shrink:0;width:56px;height:56px;border-radius:8px;background-color:#F1F1F3;background-image:{{ liveOrderImg }};background-size:cover;background-position:center;display:block"></span>
               <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
                 <span style="display:block;font-size:13px;line-height:18px;font-weight:500;color:#2E2F33;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">[글로우핏] 수분 앰플 30ml 단품</span>
-                <span style="display:block;font-size:15px;line-height:21px;font-weight:800;color:#18181A">18,900원</span>
+                <span style="display:block;font-size:15px;line-height:21px;font-weight:800;color:#0F0F11">18,900원</span>
               </span>
               <button onClick="{{ liveQuickOrder }}" style="all:unset;cursor:pointer;flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;height:34px;padding:0 16px;border-radius:8px;background:#FC678A;font-size:14px;line-height:20px;font-weight:800;color:#fff;white-space:nowrap">주문</button>
             </div>
@@ -1431,7 +1431,7 @@
         <sc-if value="{{ mInfoOpen }}" hint-placeholder-val="{{ false }}">
           <div style="position:absolute;inset:0;z-index:9">
             <div onClick="{{ closeMInfo }}" style="position:absolute;inset:0;background:rgba(0,0,0,.35);animation:smFade .18s ease"></div>
-            <div data-screen-label="라이브 안내" style="position:absolute;left:0;right:0;bottom:0;height:62%;background:#18181A;border-radius:20px 20px 0 0;display:flex;flex-direction:column;overflow:hidden;animation:omSheetUp .26s cubic-bezier(.2,.8,.3,1) both">
+            <div data-screen-label="라이브 안내" style="position:absolute;left:0;right:0;bottom:0;height:62%;background:#0F0F11;border-radius:20px 20px 0 0;display:flex;flex-direction:column;overflow:hidden;animation:omSheetUp .26s cubic-bezier(.2,.8,.3,1) both">
               <span style="align-self:center;width:44px;height:4px;border-radius:99px;background:rgba(255,255,255,.24);margin:10px 0 4px 0"></span>
               <div style="flex-shrink:0;display:flex;align-items:center;gap:4px;padding:0 8px 0 12px;border-bottom:1px solid rgba(255,255,255,0.10)">
                 <sc-for list="{{ mInfoTabs }}" as="itb" hint-placeholder-count="3">
@@ -1462,7 +1462,7 @@
         <sc-if value="{{ mCouponOpen }}" hint-placeholder-val="{{ false }}">
           <div style="position:absolute;inset:0;z-index:9">
             <div onClick="{{ closeMCoupon }}" style="position:absolute;inset:0;background:rgba(0,0,0,.45);animation:smFade .18s ease"></div>
-            <div data-screen-label="라이브 쿠폰" style="position:absolute;left:0;right:0;bottom:0;height:62%;background:#18181A;border-radius:20px 20px 0 0;display:flex;flex-direction:column;overflow:hidden;animation:omSheetUp .26s cubic-bezier(.2,.8,.3,1) both">
+            <div data-screen-label="라이브 쿠폰" style="position:absolute;left:0;right:0;bottom:0;height:62%;background:#0F0F11;border-radius:20px 20px 0 0;display:flex;flex-direction:column;overflow:hidden;animation:omSheetUp .26s cubic-bezier(.2,.8,.3,1) both">
               <div style="flex-shrink:0;position:relative;display:flex;align-items:center;justify-content:center;height:56px">
                 <span style="font-size:18px;line-height:26px;font-weight:800;color:#F7F7F8">쿠폰 <span style="color:#FC678A">5</span></span>
                 <button onClick="{{ closeMCoupon }}" aria-label="닫기" style="all:unset;cursor:pointer;position:absolute;right:10px;width:40px;height:40px;display:flex;align-items:center;justify-content:center"><span data-icon="close:regular" style="width:20px;height:20px;display:block;line-height:0;color:#F7F7F8"></span></button>
@@ -1489,7 +1489,7 @@
         </sc-if>
 
         <sc-if value="{{ mRankOpen }}" hint-placeholder-val="{{ false }}">
-          <div data-screen-label="라이브 인기랭킹" style="position:absolute;inset:0;z-index:8;background:#18181A;display:flex;flex-direction:column;padding-top:50px;animation:smFade .18s ease">
+          <div data-screen-label="라이브 인기랭킹" style="position:absolute;inset:0;z-index:8;background:#0F0F11;display:flex;flex-direction:column;padding-top:50px;animation:smFade .18s ease">
             <div style="flex-shrink:0;display:flex;align-items:center;gap:16px;height:52px;padding:0 6px 0 6px">
               <button onClick="{{ closeMRank }}" aria-label="뒤로" style="all:unset;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center"><span data-icon="chevron_left:regular" style="width:22px;height:22px;display:block;line-height:0;color:#F7F7F8;filter:drop-shadow(0 1px 3px rgba(0,0,0,.55))"></span></button>
               <sc-for list="{{ mRankTabs }}" as="rt" hint-placeholder-count="2">
@@ -1500,12 +1500,12 @@
               <sc-for list="{{ mRankCards }}" as="rk" hint-placeholder-count="4">
                 <span style="min-width:0;display:flex;flex-direction:column;gap:10px">
                   <span style="display:flex;align-items:center;gap:7px;min-width:0">
-                    <span style="flex-shrink:0;width:24px;height:24px;border-radius:99px;background-color:#2A2A2F;background-image:{{ rk.face }};background-size:cover;background-position:center"></span>
+                    <span style="flex-shrink:0;width:24px;height:24px;border-radius:99px;background-color:#202024;background-image:{{ rk.face }};background-size:cover;background-position:center"></span>
                     <span style="flex:1;min-width:0;display:block;font-size:13px;line-height:18px;font-weight:700;color:#F7F7F8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ rk.seller }}</span>
                     <span style="flex-shrink:0;display:inline-flex;align-items:center;gap:3px;font-size:12px;line-height:16px;color:rgba(255,255,255,0.56);white-space:nowrap"><span data-icon="view_count:regular" style="width:12px;height:12px;display:block;line-height:0;color:rgba(255,255,255,0.56)"></span>{{ rk.viewers }}</span>
                   </span>
                   <span style="display:flex;flex-direction:column;border-radius:14px;overflow:hidden;background:#FFFFFF">
-                    <span style="position:relative;display:block;width:100%;aspect-ratio:1/1;background-color:#2A2A2F;background-image:{{ rk.img }};background-size:cover;background-position:center">
+                    <span style="position:relative;display:block;width:100%;aspect-ratio:1/1;background-color:#202024;background-image:{{ rk.img }};background-size:cover;background-position:center">
                       <span style="position:absolute;top:8px;left:8px;display:flex;align-items:center;gap:5px">
                         <span style="display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:26px;padding:0 7px;border-radius:99px;background:rgba(23,23,26,.82);font-size:12px;line-height:16px;font-weight:700;color:#fff;white-space:nowrap">{{ rk.rank }}위</span>
                         <span style="display:inline-flex;align-items:center;height:22px;padding:0 8px;border-radius:99px;background:#FF4242;font-size:11px;line-height:14px;font-weight:800;color:#fff;letter-spacing:0.2px">LIVE</span>
@@ -1516,7 +1516,7 @@
                     <span style="display:flex;align-items:center;gap:9px;padding:10px">
                       <span style="flex-shrink:0;width:40px;height:40px;border-radius:8px;background-color:#EAEBEC;background-image:{{ rk.prodImg }};background-size:cover;background-position:center"></span>
                       <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
-                        <span style="display:block;font-size:12px;line-height:16px;font-weight:700;color:#171719;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ rk.prodName }}</span>
+                        <span style="display:block;font-size:12px;line-height:16px;font-weight:700;color:#0F0F11;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ rk.prodName }}</span>
                         <span style="display:block;font-size:14px;line-height:20px;font-weight:800;color:#FC678A">{{ rk.prodPrice }}</span>
                       </span>
                     </span>
@@ -1530,7 +1530,7 @@
         <sc-if value="{{ mSheetProd }}" hint-placeholder-val="{{ false }}">
           <div style="position:absolute;inset:0;z-index:9">
             <div onClick="{{ closeMSheet }}" style="position:absolute;inset:0;background:rgba(0,0,0,.45)"></div>
-            <div data-screen-label="라이브 상품" style="position:absolute;left:0;right:0;bottom:0;height:72%;background:#18181A;border-radius:20px 20px 0 0;display:flex;flex-direction:column;overflow:hidden">
+            <div data-screen-label="라이브 상품" style="position:absolute;left:0;right:0;bottom:0;height:72%;background:#0F0F11;border-radius:20px 20px 0 0;display:flex;flex-direction:column;overflow:hidden">
               <span style="align-self:center;width:44px;height:4px;border-radius:99px;background:rgba(255,255,255,.24);margin:10px 0 4px 0"></span>
               <div style="position:relative;flex-shrink:0;display:flex;align-items:center;gap:8px;padding:0 20px;border-bottom:1px solid rgba(255,255,255,0.10)">
                 <sc-for list="{{ mSheetTabs }}" as="st" hint-placeholder-count="2">
@@ -1544,7 +1544,7 @@
                 <div style="flex:1;min-height:0;overflow-y:auto;scrollbar-width:none;display:flex;flex-direction:column">
                   <sc-for list="{{ mProdItems }}" as="pi" hint-placeholder-count="4">
                     <span style="display:flex;gap:14px;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,0.08)">
-                      <span onClick="{{ openPdp }}" style="cursor:pointer;position:relative;flex-shrink:0;align-self:stretch;width:96px;min-height:96px;border-radius:12px;overflow:hidden;background-color:#2A2A2F;background-image:{{ pi.img }};background-size:cover;background-position:center">
+                      <span onClick="{{ openPdp }}" style="cursor:pointer;position:relative;flex-shrink:0;align-self:stretch;width:96px;min-height:96px;border-radius:12px;overflow:hidden;background-color:#202024;background-image:{{ pi.img }};background-size:cover;background-position:center">
                         <span style="position:absolute;left:0;right:0;bottom:0;padding:4px 0;text-align:center;background:rgba(0,0,0,.56);font-size:10px;line-height:14px;font-weight:600;color:#fff;white-space:nowrap">상세 페이지</span>
                       </span>
                       <span style="flex:1;min-width:0;min-height:96px;display:flex;flex-direction:column;gap:0">
@@ -1573,10 +1573,10 @@
         <sc-if value="{{ mQtyOpen }}" hint-placeholder-val="{{ false }}">
           <div style="position:absolute;inset:0;z-index:11">
             <div onClick="{{ closeMQty }}" style="position:absolute;inset:0;background:rgba(0,0,0,.55)"></div>
-            <div data-screen-label="수량 선택" style="position:absolute;left:0;right:0;bottom:0;background:#18181A;border-radius:20px 20px 0 0;display:flex;flex-direction:column;overflow:hidden;animation:smUp .2s ease">
+            <div data-screen-label="수량 선택" style="position:absolute;left:0;right:0;bottom:0;background:#0F0F11;border-radius:20px 20px 0 0;display:flex;flex-direction:column;overflow:hidden;animation:smUp .2s ease">
               <span style="align-self:center;width:44px;height:4px;border-radius:99px;background:rgba(255,255,255,.24);margin:10px 0 6px 0"></span>
               <span style="display:flex;gap:12px;padding:8px 20px 14px 20px">
-                <span style="flex-shrink:0;width:64px;height:64px;border-radius:10px;background-color:#2A2A2F;background-image:{{ mQtyImg }};background-size:cover;background-position:center"></span>
+                <span style="flex-shrink:0;width:64px;height:64px;border-radius:10px;background-color:#202024;background-image:{{ mQtyImg }};background-size:cover;background-position:center"></span>
                 <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
                   <span style="display:block;font-size:14px;line-height:20px;font-weight:700;color:#F7F7F8;word-break:keep-all">{{ mQtyName }}</span>
                   <span style="display:flex;align-items:baseline;gap:6px">
@@ -1606,7 +1606,7 @@
         <sc-if value="{{ mSheetCart }}" hint-placeholder-val="{{ false }}">
           <div style="position:absolute;inset:0;z-index:9">
             <div onClick="{{ closeMSheet }}" style="position:absolute;inset:0;background:rgba(0,0,0,.45)"></div>
-            <div data-screen-label="장바구니" style="position:absolute;left:0;right:0;bottom:0;height:72%;background:#18181A;border-radius:20px 20px 0 0;display:flex;flex-direction:column;overflow:hidden">
+            <div data-screen-label="장바구니" style="position:absolute;left:0;right:0;bottom:0;height:72%;background:#0F0F11;border-radius:20px 20px 0 0;display:flex;flex-direction:column;overflow:hidden">
               <span style="align-self:center;width:44px;height:4px;border-radius:99px;background:rgba(255,255,255,.24);margin:10px 0 4px 0"></span>
               <div style="position:relative;flex-shrink:0;display:flex;align-items:center;gap:8px;padding:0 20px;border-bottom:1px solid rgba(255,255,255,0.10)">
                 <sc-for list="{{ mSheetTabs }}" as="stb" hint-placeholder-count="2">
@@ -1634,7 +1634,7 @@
                         </span>
                         <span style="display:flex;gap:12px">
                           <button onClick="{{ ci.toggle }}" aria-label="선택" style="all:unset;cursor:pointer;flex-shrink:0;width:22px;height:22px;margin-top:2px;border-radius:99px;background:{{ ci.chkBg }};box-shadow:{{ ci.chkRing }};display:flex;align-items:center;justify-content:center"><span data-icon="check:regular" style="width:12px;height:12px;display:block;line-height:0;color:{{ ci.chkFg }}"></span></button>
-                          <span style="flex-shrink:0;width:72px;height:72px;border-radius:10px;background-color:#2A2A2F;background-image:{{ ci.img }};background-size:cover;background-position:center"></span>
+                          <span style="flex-shrink:0;width:72px;height:72px;border-radius:10px;background-color:#202024;background-image:{{ ci.img }};background-size:cover;background-position:center"></span>
                           <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
                             <span style="display:block;font-size:14px;line-height:20px;font-weight:700;color:#F7F7F8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ ci.name }}</span>
                             <span style="display:block;font-size:12px;line-height:16px;color:rgba(255,255,255,0.56);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ ci.option }}</span>
@@ -1661,7 +1661,7 @@
                       <span style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid rgba(255,255,255,0.12);font-size:15px;line-height:22px;font-weight:700;color:#F7F7F8">총 결제금액<span style="font-size:19px;font-weight:800;color:#FF8FAB">{{ cartTotalLabel }}</span></span>
                     </span>
                   </div>
-                  <div style="flex-shrink:0;display:flex;align-items:center;gap:10px;padding:10px 20px 20px 20px;border-top:1px solid rgba(255,255,255,0.10);background:#18181A">
+                  <div style="flex-shrink:0;display:flex;align-items:center;gap:10px;padding:10px 20px 20px 20px;border-top:1px solid rgba(255,255,255,0.10);background:#0F0F11">
                     <span style="flex-shrink:0;display:flex;flex-direction:column;gap:1px">
                       <span style="display:block;font-size:12px;line-height:16px;color:rgba(255,255,255,0.5)">총 결제 금액</span>
                       <span style="display:block;font-size:20px;line-height:27px;font-weight:800;color:#F7F7F8">{{ cartTotalLabel }}</span>
@@ -1679,7 +1679,7 @@
         <div ref="{{ svScrollRef }}" onScroll="{{ onSvScroll }}" style="position:absolute;inset:0;overflow-y:auto;scroll-snap-type:y mandatory;overscroll-behavior-y:contain;scrollbar-width:none">
           <sc-for list="{{ svFeed }}" as="v" hint-placeholder-count="1">
             <div onClick="{{ v.tapToggle }}" style="height:100%;scroll-snap-align:start;scroll-snap-stop:always;position:relative;background:#000;cursor:pointer;overflow:hidden">
-              <span style="position:absolute;inset:0;background-color:#1C1C1E;background-image:{{ v.img }};background-size:cover;background-position:center"></span>
+              <span style="position:absolute;inset:0;background-color:#131315;background-image:{{ v.img }};background-size:cover;background-position:center"></span>
               <span style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.32),rgba(0,0,0,0) 22%,rgba(0,0,0,0) 48%,rgba(0,0,0,.66))"></span>
               <sc-if value="{{ v.paused }}" hint-placeholder-val="{{ false }}">
                 <span style="pointer-events:none;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:7;width:66px;height:66px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(20,20,22,.42);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)">
@@ -1706,7 +1706,7 @@
               </div>
               <div style="position:absolute;left:16px;right:72px;bottom:74px;color:#fff;display:flex;flex-direction:column;gap:8px;z-index:5">
                 <span style="display:flex;align-items:center;gap:8px">
-                  <span style="flex-shrink:0;width:34px;height:34px;border-radius:99px;display:block;background-color:#2A2A2F;background-image:{{ v.avatar }};background-size:cover;background-position:center"></span>
+                  <span style="flex-shrink:0;width:34px;height:34px;border-radius:99px;display:block;background-color:#202024;background-image:{{ v.avatar }};background-size:cover;background-position:center"></span>
                   <span style="min-width:0;font-size:15px;letter-spacing:-0.022em;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-shadow:0 1px 4px rgba(0,0,0,.4)">{{ v.handle }}</span>
                   <button onClick="{{ v.follow }}" style-active="transform:scale(.98)" style="all:unset;cursor:pointer;flex-shrink:0;padding:2px 7px;border-radius:999px;box-sizing:border-box;border:1px solid {{ v.followBorder }};color:{{ v.followFg }};font-size:13px;letter-spacing:-0.002em;font-weight:600;white-space:nowrap">{{ v.followLabel }}</button>
                 </span>
@@ -1718,10 +1718,10 @@
                   <span onClick="{{ v.prodTap }}" style="margin-top:4px;box-sizing:border-box;border-radius:12px;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.32);display:flex;align-items:center;gap:10px;padding:8px;cursor:pointer">
                     <span style="flex-shrink:0;width:52px;height:52px;border-radius:8px;background-color:#F4F5F6;background-image:{{ v.prodImg }};background-size:cover;background-position:center;display:block"></span>
                     <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
-                      <span style="font-size:13px;line-height:17px;font-weight:500;color:#171719;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">{{ v.prodName }}</span>
-                      <span style="display:flex;align-items:center;gap:6px"><span style="white-space:nowrap;font-size:14px;line-height:19px;font-weight:800;color:#FC678A">{{ v.prodOff }}</span><span style="white-space:nowrap;font-size:15px;line-height:20px;font-weight:800;color:#171719">{{ v.prodPrice }}</span></span>
+                      <span style="font-size:13px;line-height:17px;font-weight:500;color:#0F0F11;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">{{ v.prodName }}</span>
+                      <span style="display:flex;align-items:center;gap:6px"><span style="white-space:nowrap;font-size:14px;line-height:19px;font-weight:800;color:#FC678A">{{ v.prodOff }}</span><span style="white-space:nowrap;font-size:15px;line-height:20px;font-weight:800;color:#0F0F11">{{ v.prodPrice }}</span></span>
                     </span>
-                    <span style-hover="background:#F4F5F6" style="flex-shrink:0;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;height:24px;padding:0 9px;border-radius:99px;border:1px solid rgba(112,115,124,0.28);font-size:11px;font-weight:700;color:#171719;white-space:nowrap">상세보기</span>
+                    <span style-hover="background:#F4F5F6" style="flex-shrink:0;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;height:24px;padding:0 9px;border-radius:99px;border:1px solid rgba(112,115,124,0.28);font-size:11px;font-weight:700;color:#0F0F11;white-space:nowrap">상세보기</span>
                   </span>
                 </sc-if>
               </div>
@@ -1739,7 +1739,7 @@
           <div style="position:absolute;inset:0;z-index:20">
             <div onClick="{{ closeSvCmt }}" style="position:absolute;inset:0;background:#000"></div>
             <div onClick="{{ closeSvCmt }}" style="position:absolute;top:56px;left:0;right:0;bottom:60%;display:flex;align-items:center;justify-content:center;padding:8px 0;animation:smFade .22s ease;cursor:pointer">
-              <span style="height:100%;aspect-ratio:9/16;max-width:88%;border-radius:12px;overflow:hidden;display:block;background-color:#1C1C1E;background-image:{{ svCmtImg }};background-size:cover;background-position:center"></span>
+              <span style="height:100%;aspect-ratio:9/16;max-width:88%;border-radius:12px;overflow:hidden;display:block;background-color:#131315;background-image:{{ svCmtImg }};background-size:cover;background-position:center"></span>
             </div>
             <div data-screen-label="댓글 시트" style="position:absolute;left:0;right:0;bottom:0;height:60%;background:#232326;border-radius:22px 22px 0 0;display:flex;flex-direction:column;animation:omSheetUp .3s cubic-bezier(.2,.8,.3,1)">
               <button onClick="{{ closeSvCmt }}" aria-label="닫기" style="all:unset;cursor:pointer;align-self:stretch;display:flex;justify-content:center;padding:12px 0 16px 0">
@@ -1747,7 +1747,7 @@
               </button>
               <div style="flex:1;min-height:0;overflow-y:auto;padding:0 16px;display:flex;flex-direction:column;gap:24px">
                 <div style="display:flex;gap:12px;flex-shrink:0;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.068)">
-                  <span style="width:36px;height:36px;border-radius:999px;flex-shrink:0;display:block;background-color:#2A2A2F;background-image:{{ svCmtFace }};background-size:cover;background-position:center"></span>
+                  <span style="width:36px;height:36px;border-radius:999px;flex-shrink:0;display:block;background-color:#202024;background-image:{{ svCmtFace }};background-size:cover;background-position:center"></span>
                   <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:4px">
                     <span style="font-size:15px;letter-spacing:-0.022em;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ svCmtHandle }}</span>
                     <span style="font-size:14px;font-weight:500;letter-spacing:-0.006em;line-height:1.68;color:rgba(255,255,255,.76);word-break:keep-all">{{ svCmtCaption }}</span>
@@ -1756,7 +1756,7 @@
                 </div>
                 <sc-for list="{{ svComments }}" as="cm" hint-placeholder-count="4">
                   <div style="display:flex;gap:12px;flex-shrink:0">
-                    <span style="width:36px;height:36px;flex-shrink:0;border-radius:999px;display:block;background-color:#2A2A2F;background-image:{{ cm.face }};background-size:cover;background-position:center"></span>
+                    <span style="width:36px;height:36px;flex-shrink:0;border-radius:999px;display:block;background-color:#202024;background-image:{{ cm.face }};background-size:cover;background-position:center"></span>
                     <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:4px">
                       <span style="display:flex;align-items:baseline;gap:8px;min-width:0"><span style="font-size:14px;letter-spacing:-0.018em;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ cm.user }}</span><span style="flex-shrink:0;font-size:14px;font-weight:500;letter-spacing:-0.006em;color:rgba(255,255,255,.76)">{{ cm.time }}</span></span>
                       <span style="font-size:14px;font-weight:500;letter-spacing:-0.006em;line-height:1.68;color:rgba(255,255,255,.76);word-break:break-word">{{ cm.text }}</span>
@@ -1771,7 +1771,7 @@
                 <span style="display:block;height:12px;flex-shrink:0"></span>
               </div>
               <div style="flex-shrink:0;display:flex;align-items:center;gap:10px;padding:10px 16px 26px 16px;border-top:1px solid rgba(255,255,255,.068)">
-                <span style="width:32px;height:32px;border-radius:999px;flex-shrink:0;display:block;background-color:#2A2A2F;background-image:{{ svMyFace }};background-size:cover;background-position:center"></span>
+                <span style="width:32px;height:32px;border-radius:999px;flex-shrink:0;display:block;background-color:#202024;background-image:{{ svMyFace }};background-size:cover;background-position:center"></span>
                 <span style="flex:1;min-width:0;height:40px;box-sizing:border-box;display:flex;align-items:center;padding:0 16px;border-radius:999px;background:rgba(255,255,255,.08);font-size:14px;font-weight:500;color:rgba(255,255,255,.5)">댓글을 입력해 주세요</span>
               </div>
             </div>
@@ -1783,11 +1783,11 @@
       <div data-screen-label="셀러몰 홈" style="position:absolute;inset:0;z-index:72;background:#fff;display:flex;flex-direction:column;overflow:hidden;animation:smFade .2s ease">
         <div style="flex-shrink:0;height:50px;background:#fff"></div>
         <div style="position:relative;flex-shrink:0;display:flex;align-items:center;gap:8px;height:48px;padding:0 10px;background:#fff">
-          <button onClick="{{ closeMall }}" aria-label="뒤로" style="all:unset;cursor:pointer;flex-shrink:0;width:32px;height:32px;display:flex;align-items:center;justify-content:center"><span data-icon="list:regular" style="width:22px;height:22px;display:block;line-height:0;color:#18181A"></span></button>
+          <button onClick="{{ closeMall }}" aria-label="뒤로" style="all:unset;cursor:pointer;flex-shrink:0;width:32px;height:32px;display:flex;align-items:center;justify-content:center"><span data-icon="list:regular" style="width:22px;height:22px;display:block;line-height:0;color:#0F0F11"></span></button>
           <span style="flex:1;min-width:0"></span>
           <span aria-label="숏챌몰" style="pointer-events:none;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:block;width:104px;height:30px;background-color:#FC678A;-webkit-mask:url('assets/img4/sc-mall-logo.svg') no-repeat center / contain;mask:url('assets/img4/sc-mall-logo.svg') no-repeat center / contain"></span>
-          <button onClick="{{ pdpNotice }}" aria-label="검색" style="all:unset;cursor:pointer;flex-shrink:0;width:32px;height:32px;display:flex;align-items:center;justify-content:center"><span data-icon="search:regular" style="width:22px;height:22px;display:block;line-height:0;color:#18181A"></span></button>
-          <button onClick="{{ openMallMenu }}" aria-label="더보기" style="all:unset;cursor:pointer;flex-shrink:0;width:32px;height:32px;display:flex;align-items:center;justify-content:center"><span data-icon="more_vert:regular" style="width:22px;height:22px;display:block;line-height:0;color:#18181A"></span></button>
+          <button onClick="{{ pdpNotice }}" aria-label="검색" style="all:unset;cursor:pointer;flex-shrink:0;width:32px;height:32px;display:flex;align-items:center;justify-content:center"><span data-icon="search:regular" style="width:22px;height:22px;display:block;line-height:0;color:#0F0F11"></span></button>
+          <button onClick="{{ openMallMenu }}" aria-label="더보기" style="all:unset;cursor:pointer;flex-shrink:0;width:32px;height:32px;display:flex;align-items:center;justify-content:center"><span data-icon="more_vert:regular" style="width:22px;height:22px;display:block;line-height:0;color:#0F0F11"></span></button>
         </div>
         <div style="flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 16px 10px 16px;background:#fff;border-bottom:1px solid rgba(112,115,124,0.22)">
           <sc-for list="{{ mallTabs }}" as="mt" hint-placeholder-count="4">
@@ -1817,7 +1817,7 @@
 
           <span style="display:flex;flex-direction:column;gap:16px;padding:22px 16px 110px 16px">
             <span style="display:flex;align-items:center;gap:6px">
-              <span style="display:block;font-size:20px;line-height:28px;letter-spacing:-0.012em;font-weight:900;color:#18181A">오늘의 특가</span>
+              <span style="display:block;font-size:20px;line-height:28px;letter-spacing:-0.012em;font-weight:900;color:#0F0F11">오늘의 특가</span>
               <span style="display:block;font-size:13px;line-height:18px;letter-spacing:0.0194em;font-weight:700;color:#FC678A">단하루</span>
             </span>
             <span style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px 12px">
@@ -1831,7 +1831,7 @@
                     <span style="display:block;text-align:left;font-size:12px;line-height:16px;letter-spacing:0.0252em;font-weight:500;color:rgba(46,47,51,.52);text-decoration:line-through">{{ mi.was }}</span>
                     <span style="display:flex;align-items:baseline;gap:5px">
                       <span style="font-size:14px;line-height:20px;font-weight:900;color:#FC678A">{{ mi.off }}</span>
-                      <span style="font-size:16px;line-height:22px;letter-spacing:0.0057em;font-weight:900;color:#18181A">{{ mi.price }}</span>
+                      <span style="font-size:16px;line-height:22px;letter-spacing:0.0057em;font-weight:900;color:#0F0F11">{{ mi.price }}</span>
                     </span>
                   </span>
                 </button>
@@ -1840,7 +1840,7 @@
           </span>
         </div>
         <div style="position:absolute;left:0;right:0;bottom:0;z-index:90;height:83px;box-sizing:border-box;padding:0 12px 34px 4px;background:#fff;box-shadow:0 -0.5px 0 0 rgba(112,115,124,0.22),0 -8px 24px rgba(0,0,0,.06);display:flex;align-items:flex-start">
-          <button onClick="{{ mallBack }}" aria-label="뒤로" style-active="transform:scale(.94)" style="all:unset;-webkit-tap-highlight-color:transparent;cursor:pointer;flex:0 0 52px;height:41px;margin:6px 0 2px 14px;border-radius:99px;background:#F4F5F6;display:flex;align-items:center;justify-content:center;color:#18181A;transition:transform .2s cubic-bezier(.33,.9,.28,1)">
+          <button onClick="{{ mallBack }}" aria-label="뒤로" style-active="transform:scale(.94)" style="all:unset;-webkit-tap-highlight-color:transparent;cursor:pointer;flex:0 0 52px;height:41px;margin:6px 0 2px 14px;border-radius:99px;background:#F4F5F6;display:flex;align-items:center;justify-content:center;color:#0F0F11;transition:transform .2s cubic-bezier(.33,.9,.28,1)">
             <span data-icon="chevron_left:regular" style="width:24px;height:24px;display:block;line-height:0"></span>
           </button>
           <span style="display:none;width:1px;height:24px;flex-shrink:0;margin:12.5px -7.5px 0 18.5px;background:rgba(112,115,124,.28)"></span>
@@ -1860,12 +1860,12 @@
           <div data-screen-label="숏챌몰 마이페이지" style="position:absolute;inset:0;z-index:74;background:#fff;display:flex;flex-direction:column;overflow:hidden;animation:smFade .18s ease">
             <div style="flex-shrink:0;height:50px;background:#fff"></div>
             <div style="position:relative;flex-shrink:0;display:flex;align-items:center;gap:8px;height:48px;padding:0 10px;background:#fff">
-              <span style="position:absolute;left:0;right:0;text-align:center;font-size:17px;line-height:24px;font-weight:800;color:#18181A;pointer-events:none">마이페이지</span>
+              <span style="position:absolute;left:0;right:0;text-align:center;font-size:17px;line-height:24px;font-weight:800;color:#0F0F11;pointer-events:none">마이페이지</span>
               <span style="flex:1;min-width:0"></span>
             </div>
             <div style="flex:1;min-height:0;overflow-y:auto;scrollbar-width:none;background:#fff;padding-bottom:110px">
               <span style="display:flex;align-items:center;justify-content:space-between;padding:18px 16px 14px 16px">
-                <span style="display:block;font-size:17px;line-height:24px;font-weight:800;color:#18181A">회원님</span>
+                <span style="display:block;font-size:17px;line-height:24px;font-weight:800;color:#0F0F11">회원님</span>
                 <span style="display:flex;align-items:center;gap:2px">
                   <span style="display:block;font-size:14px;line-height:20px;letter-spacing:0.0145em;font-weight:700;color:#2E2F33">개인정보 관리</span>
                   <span data-icon="chevron_right:regular" style="width:16px;height:16px;display:block;line-height:0;color:rgba(46,47,51,.52)"></span>
@@ -1878,7 +1878,7 @@
                     <span style="display:block;font-size:13px;line-height:18px;letter-spacing:0.0194em;font-weight:600;color:rgba(46,47,51,.61)">보유 적립금</span>
                   </span>
                   <span style="display:flex;align-items:center;gap:3px">
-                    <span style="display:block;font-size:20px;line-height:28px;letter-spacing:-0.012em;font-weight:900;color:#18181A">1,000p</span>
+                    <span style="display:block;font-size:20px;line-height:28px;letter-spacing:-0.012em;font-weight:900;color:#0F0F11">1,000p</span>
                     <span data-icon="chevron_right:regular" style="width:16px;height:16px;display:block;line-height:0;color:rgba(46,47,51,.52)"></span>
                   </span>
                 </span>
@@ -1888,7 +1888,7 @@
                     <span style="display:block;font-size:13px;line-height:18px;letter-spacing:0.0194em;font-weight:600;color:rgba(46,47,51,.61)">보유 쿠폰</span>
                   </span>
                   <span style="display:flex;align-items:center;gap:3px">
-                    <span style="display:block;font-size:20px;line-height:28px;letter-spacing:-0.012em;font-weight:900;color:#18181A">4장</span>
+                    <span style="display:block;font-size:20px;line-height:28px;letter-spacing:-0.012em;font-weight:900;color:#0F0F11">4장</span>
                     <span data-icon="chevron_right:regular" style="width:16px;height:16px;display:block;line-height:0;color:rgba(46,47,51,.52)"></span>
                   </span>
                 </span>
@@ -1896,7 +1896,7 @@
               <span style="display:flex;align-items:center;justify-content:space-between;gap:8px;padding:14px 16px;border-top:1px solid rgba(112,115,124,0.22);border-bottom:1px solid rgba(112,115,124,0.22)">
                 <span style="display:flex;align-items:center;gap:8px">
                   <span data-icon="review_star:regular" style="width:20px;height:20px;display:block;line-height:0;color:rgba(46,47,51,.52)"></span>
-                  <span style="display:block;font-size:15px;line-height:22px;letter-spacing:0.0096em;font-weight:700;color:#18181A">회원등급</span>
+                  <span style="display:block;font-size:15px;line-height:22px;letter-spacing:0.0096em;font-weight:700;color:#0F0F11">회원등급</span>
                 </span>
                 <span style="display:flex;align-items:center;gap:3px">
                   <span style="display:block;font-size:14px;line-height:20px;letter-spacing:0.0145em;font-weight:800;color:#FC678A">HELLO</span>
@@ -1909,7 +1909,7 @@
                   <sc-for list="{{ mg.rows }}" as="mr" hint-placeholder-count="3">
                     <button onClick="{{ mr.tap }}" style="all:unset;cursor:pointer;box-sizing:border-box;width:100%;display:flex;align-items:center;gap:10px;padding:15px 16px;border-bottom:1px solid rgba(112,115,124,0.16)">
                       <span data-icon="{{ mr.icon }}:regular" style="flex-shrink:0;width:20px;height:20px;display:block;line-height:0;color:rgba(46,47,51,.52)"></span>
-                      <span style="flex:1;min-width:0;display:block;text-align:left;font-size:15px;line-height:22px;letter-spacing:0.0096em;font-weight:700;color:#18181A">{{ mr.label }}</span>
+                      <span style="flex:1;min-width:0;display:block;text-align:left;font-size:15px;line-height:22px;letter-spacing:0.0096em;font-weight:700;color:#0F0F11">{{ mr.label }}</span>
                       <span style="display:block;font-size:13px;line-height:18px;letter-spacing:0.0194em;font-weight:600;color:rgba(46,47,51,.61);white-space:nowrap">{{ mr.value }}</span>
                       <span data-icon="chevron_right:regular" style="flex-shrink:0;width:16px;height:16px;display:block;line-height:0;color:rgba(46,47,51,.4)"></span>
                     </button>
@@ -1924,12 +1924,12 @@
           <div data-screen-label="숏챌몰 주문·배송" style="position:absolute;inset:0;z-index:74;background:#fff;display:flex;flex-direction:column;overflow:hidden;animation:smFade .18s ease">
             <div style="flex-shrink:0;height:50px;background:#fff"></div>
             <div style="position:relative;flex-shrink:0;display:flex;align-items:center;gap:8px;height:48px;padding:0 10px;background:#fff">
-              <span style="position:absolute;left:0;right:0;text-align:center;font-size:16px;line-height:22px;font-weight:800;color:#18181A;pointer-events:none">주문목록 / 배송조회</span>
+              <span style="position:absolute;left:0;right:0;text-align:center;font-size:16px;line-height:22px;font-weight:800;color:#0F0F11;pointer-events:none">주문목록 / 배송조회</span>
               <span style="flex:1;min-width:0"></span>
             </div>
             <div style="flex:1;min-height:0;overflow-y:auto;scrollbar-width:none;background:#fff;padding-bottom:110px">
               <span style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)">
-                <span style="display:block;padding:12px 0;text-align:center;font-size:14px;line-height:20px;letter-spacing:0.0145em;font-weight:700;color:#18181A;border-bottom:2px solid #18181A">주문내역</span>
+                <span style="display:block;padding:12px 0;text-align:center;font-size:14px;line-height:20px;letter-spacing:0.0145em;font-weight:700;color:#0F0F11;border-bottom:2px solid #0F0F11">주문내역</span>
                 <span style="display:block;padding:12px 0;text-align:center;font-size:14px;line-height:20px;letter-spacing:0.0145em;font-weight:600;color:rgba(46,47,51,.52);background:#F4F5F6;border-bottom:1px solid rgba(112,115,124,0.22)">취소/반품/교환</span>
               </span>
               <span style="display:flex;align-items:center;gap:14px;padding:14px 16px;border-bottom:1px solid rgba(112,115,124,0.22)">
@@ -1941,8 +1941,8 @@
                 </sc-for>
                 <span style="flex:1;min-width:0"></span>
                 <span style="display:flex;align-items:center;gap:3px">
-                  <span style="display:block;font-size:13px;line-height:18px;letter-spacing:0.0194em;font-weight:700;color:#18181A;white-space:nowrap">2026년</span>
-                  <span data-icon="expand_more:regular" style="width:16px;height:16px;display:block;line-height:0;color:#18181A"></span>
+                  <span style="display:block;font-size:13px;line-height:18px;letter-spacing:0.0194em;font-weight:700;color:#0F0F11;white-space:nowrap">2026년</span>
+                  <span data-icon="expand_more:regular" style="width:16px;height:16px;display:block;line-height:0;color:#0F0F11"></span>
                 </span>
               </span>
               <span style="display:flex;align-items:center;justify-content:center;height:220px;font-size:14px;line-height:20px;letter-spacing:0.0145em;font-weight:600;color:rgba(46,47,51,.52)">조회할 주문내역이 없습니다.</span>
@@ -1951,8 +1951,8 @@
                 <span data-icon="chevron_right:regular" style="flex-shrink:0;width:16px;height:16px;display:block;line-height:0;color:rgba(46,47,51,.52)"></span>
               </button>
               <span style="display:flex;flex-direction:column;align-items:center;gap:14px;padding:34px 16px 30px 16px">
-                <span style="display:block;font-size:15px;line-height:22px;font-weight:800;color:#18181A">고객센터 02-1600-3447</span>
-                <button onClick="{{ pdpNotice }}" style="all:unset;cursor:pointer;display:flex;align-items:center;gap:6px;height:44px;padding:0 22px;border-radius:8px;background:#18181A">
+                <span style="display:block;font-size:15px;line-height:22px;font-weight:800;color:#0F0F11">고객센터 02-1600-3447</span>
+                <button onClick="{{ pdpNotice }}" style="all:unset;cursor:pointer;display:flex;align-items:center;gap:6px;height:44px;padding:0 22px;border-radius:8px;background:#0F0F11">
                   <span style="display:block;font-size:14px;line-height:20px;letter-spacing:0.0145em;font-weight:800;color:#fff">전화 문의</span>
                   <span data-icon="chevron_right:regular" style="width:16px;height:16px;display:block;line-height:0;color:#fff"></span>
                 </button>
@@ -1965,13 +1965,13 @@
           <div data-screen-label="숏챌몰 장바구니" style="position:absolute;inset:0;z-index:74;background:#fff;display:flex;flex-direction:column;overflow:hidden;animation:smFade .18s ease">
             <div style="flex-shrink:0;height:50px;background:#fff"></div>
             <div style="position:relative;flex-shrink:0;display:flex;align-items:center;gap:8px;height:48px;padding:0 10px;background:#fff">
-              <span style="position:absolute;left:0;right:0;text-align:center;font-size:16px;line-height:22px;font-weight:800;color:#18181A;pointer-events:none">장바구니</span>
+              <span style="position:absolute;left:0;right:0;text-align:center;font-size:16px;line-height:22px;font-weight:800;color:#0F0F11;pointer-events:none">장바구니</span>
               <span style="flex:1;min-width:0"></span>
             </div>
             <div style="flex:1;min-height:0;overflow-y:auto;scrollbar-width:none;background:#fff;padding-bottom:110px">
               <span style="display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid rgba(112,115,124,0.22)">
                 <span style="flex-shrink:0;width:22px;height:22px;border-radius:99px;background:#FC678A;display:flex;align-items:center;justify-content:center"><span data-icon="check:regular" style="width:12px;height:12px;display:block;line-height:0;color:#fff"></span></span>
-                <span style="flex:1;min-width:0;display:block;font-size:15px;line-height:22px;font-weight:700;color:#18181A">전체선택 ({{ cartSelCount }}/{{ cartTotalCount }})</span>
+                <span style="flex:1;min-width:0;display:block;font-size:15px;line-height:22px;font-weight:700;color:#0F0F11">전체선택 ({{ cartSelCount }}/{{ cartTotalCount }})</span>
                 <span style="display:block;font-size:12px;line-height:16px;font-weight:600;color:rgba(46,47,51,.52)">선택 삭제</span>
                 <span style="display:block;width:1px;height:12px;background:rgba(112,115,124,0.28)"></span>
                 <span style="display:block;font-size:12px;line-height:16px;font-weight:600;color:rgba(46,47,51,.52)">품절 삭제</span>
@@ -1982,39 +1982,39 @@
               <sc-for list="{{ mCartItems }}" as="mc" hint-placeholder-count="2">
                 <span style="display:flex;flex-direction:column;gap:10px;padding:14px 16px 16px 16px;border-bottom:1px solid rgba(112,115,124,0.22)">
                   <span style="display:flex;align-items:center;gap:8px">
-                    <span style="flex:1;min-width:0;font-size:15px;line-height:22px;font-weight:800;color:#18181A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ mc.seller }}</span>
+                    <span style="flex:1;min-width:0;font-size:15px;line-height:22px;font-weight:800;color:#0F0F11;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ mc.seller }}</span>
                     <button onClick="{{ mc.remove }}" aria-label="삭제" style-hover="background:rgba(112,115,124,0.10)" style="all:unset;cursor:pointer;flex-shrink:0;width:28px;height:28px;border-radius:99px;background:transparent;transition:background .15s ease;display:flex;align-items:center;justify-content:center"><span style="width:16px;height:16px;display:block;background:rgba(46,47,51,.52);-webkit-mask:var(--om-i-trash-regular) center/contain no-repeat;mask:var(--om-i-trash-regular) center/contain no-repeat"></span></button>
                   </span>
                   <span style="display:flex;gap:12px">
                     <button onClick="{{ mc.toggle }}" aria-label="선택" style="all:unset;cursor:pointer;flex-shrink:0;width:22px;height:22px;margin-top:2px;border-radius:99px;background:{{ mc.chkBgL }};box-shadow:{{ mc.chkRingL }};display:flex;align-items:center;justify-content:center"><span data-icon="check:regular" style="width:12px;height:12px;display:block;line-height:0;color:{{ mc.chkFgL }}"></span></button>
                     <span style="flex-shrink:0;width:72px;height:72px;border-radius:10px;background-color:#F1F1F3;background-image:{{ mc.img }};background-size:cover;background-position:center"></span>
                     <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
-                      <span style="display:block;font-size:14px;line-height:20px;font-weight:700;color:#18181A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ mc.name }}</span>
+                      <span style="display:block;font-size:14px;line-height:20px;font-weight:700;color:#0F0F11;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ mc.name }}</span>
                       <span style="display:block;font-size:12px;line-height:16px;color:rgba(46,47,51,.52);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ mc.option }}</span>
                       <span style="display:flex;align-items:baseline;gap:6px">
                         <span style="font-size:12px;line-height:16px;color:rgba(46,47,51,.38);text-decoration:line-through">{{ mc.was }}</span>
-                        <span style="font-size:16px;line-height:22px;font-weight:800;color:#18181A">{{ mc.price }}</span>
+                        <span style="font-size:16px;line-height:22px;font-weight:800;color:#0F0F11">{{ mc.price }}</span>
                       </span>
                     </span>
                   </span>
                   <span style="display:flex;align-items:center;gap:8px;padding-left:34px">
                     <span style="flex-shrink:0;margin-left:auto;display:flex;align-items:center;height:34px;background:rgba(112,115,124,0.10);border-radius:99px;overflow:hidden">
                       <button onClick="{{ mc.dec }}" aria-label="수량 감소" style="all:unset;cursor:pointer;width:34px;height:34px;display:flex;align-items:center;justify-content:center;font-size:17px;line-height:1;font-weight:700;color:#2E2F33">−</button>
-                      <span style="display:flex;align-items:center;justify-content:center;min-width:40px;height:18px;border-left:1px solid rgba(112,115,124,0.22);border-right:1px solid rgba(112,115,124,0.22);font-size:14px;font-weight:700;color:#18181A">{{ mc.qtyLabel }}</span>
+                      <span style="display:flex;align-items:center;justify-content:center;min-width:40px;height:18px;border-left:1px solid rgba(112,115,124,0.22);border-right:1px solid rgba(112,115,124,0.22);font-size:14px;font-weight:700;color:#0F0F11">{{ mc.qtyLabel }}</span>
                       <button onClick="{{ mc.inc }}" aria-label="수량 증가" style="all:unset;cursor:pointer;width:34px;height:34px;display:flex;align-items:center;justify-content:center;font-size:17px;line-height:1;font-weight:700;color:#2E2F33">+</button>
                     </span>
                     <button onClick="{{ mc.buy }}" style="all:unset;cursor:pointer;box-sizing:border-box;flex:none;width:120px;height:34px;border-radius:99px;background:#FC678A;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#fff;white-space:nowrap">바로구매</button>
                   </span>
-                  <span style="display:flex;align-items:center;justify-content:flex-end;gap:6px;margin-top:2px;font-size:13px;line-height:18px;color:rgba(46,47,51,.52);white-space:nowrap">상품 {{ mc.goodsLabel }} + 배송비 {{ mc.shipLabel }} = <span style="font-size:14px;font-weight:800;color:#18181A">{{ mc.payLabel }}</span></span>
+                  <span style="display:flex;align-items:center;justify-content:flex-end;gap:6px;margin-top:2px;font-size:13px;line-height:18px;color:rgba(46,47,51,.52);white-space:nowrap">상품 {{ mc.goodsLabel }} + 배송비 {{ mc.shipLabel }} = <span style="font-size:14px;font-weight:800;color:#0F0F11">{{ mc.payLabel }}</span></span>
                 </span>
               </sc-for>
               <span style="display:flex;align-items:center;justify-content:space-between;padding:18px 16px;border-bottom:1px solid rgba(112,115,124,0.22)">
-                <span style="display:block;font-size:15px;line-height:22px;font-weight:700;color:#18181A">총 결제 예상 금액</span>
-                <span style="display:block;font-size:19px;line-height:26px;font-weight:800;color:#18181A">{{ cartTotalLabel }}</span>
+                <span style="display:block;font-size:15px;line-height:22px;font-weight:700;color:#0F0F11">총 결제 예상 금액</span>
+                <span style="display:block;font-size:19px;line-height:26px;font-weight:800;color:#0F0F11">{{ cartTotalLabel }}</span>
               </span>
               <span style="display:flex;align-items:center;justify-content:space-between;padding:16px">
                 <span style="display:block;font-size:14px;line-height:20px;font-weight:500;color:rgba(46,47,51,.62)">총 상품 금액</span>
-                <span style="display:block;font-size:14px;line-height:20px;font-weight:700;color:#18181A">{{ cartGoodsLabel }}</span>
+                <span style="display:block;font-size:14px;line-height:20px;font-weight:700;color:#0F0F11">{{ cartGoodsLabel }}</span>
               </span>
               <span style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;padding:6px 16px 20px 16px">
                 <button onClick="{{ closeMallSub }}" style="all:unset;cursor:pointer;box-sizing:border-box;height:48px;border-radius:8px;background:#F4F5F6;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#2E2F33">쇼핑 계속하기</button>
@@ -2028,24 +2028,24 @@
           <div data-screen-label="숏챌몰 전체메뉴" style="position:absolute;inset:0;z-index:76;background:#fff;display:flex;flex-direction:column;overflow:hidden;animation:smFade .18s ease">
             <div style="flex-shrink:0;height:50px;background:#fff"></div>
             <div style="flex-shrink:0;display:flex;align-items:center;gap:12px;height:52px;padding:0 12px 0 16px;background:#fff">
-              <span style="flex:1;min-width:0;display:block;font-size:15px;line-height:22px;letter-spacing:0.0096em;font-weight:700;color:#18181A">회원님 오늘도 즐거운 쇼핑되세요!</span>
-              <button onClick="{{ closeMallSub }}" aria-label="닫기" style="all:unset;cursor:pointer;flex-shrink:0;width:36px;height:36px;display:flex;align-items:center;justify-content:center"><span data-icon="close:regular" style="width:24px;height:24px;display:block;line-height:0;color:#18181A"></span></button>
+              <span style="flex:1;min-width:0;display:block;font-size:15px;line-height:22px;letter-spacing:0.0096em;font-weight:700;color:#0F0F11">회원님 오늘도 즐거운 쇼핑되세요!</span>
+              <button onClick="{{ closeMallSub }}" aria-label="닫기" style="all:unset;cursor:pointer;flex-shrink:0;width:36px;height:36px;display:flex;align-items:center;justify-content:center"><span data-icon="close:regular" style="width:24px;height:24px;display:block;line-height:0;color:#0F0F11"></span></button>
             </div>
             <div style="flex:1;min-height:0;overflow-y:auto;scrollbar-width:none;background:#fff;padding-bottom:40px">
               <span style="display:grid;grid-template-columns:repeat(4, minmax(0,1fr));margin:6px 16px 0 16px;border:1px solid rgba(112,115,124,0.22)">
                 <sc-for list="{{ mallMenuGrid }}" as="gq" hint-placeholder-count="8">
                   <button onClick="{{ gq.tap }}" style="all:unset;cursor:pointer;box-sizing:border-box;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:18px 4px;border-right:1px solid rgba(112,115,124,0.16);border-bottom:{{ gq.bb }}">
-                    <span data-icon="{{ gq.icon }}:regular" style="width:26px;height:26px;display:block;line-height:0;color:#18181A"></span>
+                    <span data-icon="{{ gq.icon }}:regular" style="width:26px;height:26px;display:block;line-height:0;color:#0F0F11"></span>
                     <span style="display:block;text-align:center;font-size:12px;line-height:16px;letter-spacing:0.0252em;font-weight:600;color:rgba(46,47,51,.75);white-space:nowrap">{{ gq.label }}</span>
                   </button>
                 </sc-for>
               </span>
               <button onClick="{{ pdpNotice }}" style="all:unset;cursor:pointer;box-sizing:border-box;width:calc(100% - 32px);margin:0 16px;display:flex;align-items:center;justify-content:center;gap:7px;padding:14px 0;background:#F4F5F6">
                 <span data-icon="price_won:regular" style="width:20px;height:20px;display:block;line-height:0;color:#FC678A"></span>
-                <span style="display:block;font-size:14px;line-height:20px;letter-spacing:0.0145em;font-weight:800;color:#18181A">친구 초대 리워드 URL</span>
+                <span style="display:block;font-size:14px;line-height:20px;letter-spacing:0.0145em;font-weight:800;color:#0F0F11">친구 초대 리워드 URL</span>
               </button>
-              <span style="display:block;padding:34px 16px 10px 16px;font-size:18px;line-height:26px;letter-spacing:-0.002em;font-weight:900;color:#18181A">카테고리</span>
-              <span style="display:block;margin:0 16px;border-top:2px solid #18181A"></span>
+              <span style="display:block;padding:34px 16px 10px 16px;font-size:18px;line-height:26px;letter-spacing:-0.002em;font-weight:900;color:#0F0F11">카테고리</span>
+              <span style="display:block;margin:0 16px;border-top:2px solid #0F0F11"></span>
               <sc-for list="{{ mallCats }}" as="mc" hint-placeholder-count="10">
                 <button onClick="{{ mc.tap }}" style="all:unset;cursor:pointer;box-sizing:border-box;width:calc(100% - 32px);margin:0 16px;display:flex;align-items:center;gap:12px;padding:15px 2px;border-bottom:1px solid rgba(112,115,124,0.16)">
                   <span style="flex-shrink:0;width:26px;height:26px;border-radius:6px;background:{{ mc.bg }};display:flex;align-items:center;justify-content:center">
@@ -2070,7 +2070,7 @@
     </sc-if>
 
     <sc-if value="{{ pdpOpen }}" hint-placeholder-val="{{ false }}">
-      <div data-screen-label="상품 정보" style="position:absolute;inset:0;z-index:70;background:#18181A;display:flex;flex-direction:column;overflow:hidden;animation:smFade .2s ease">
+      <div data-screen-label="상품 정보" style="position:absolute;inset:0;z-index:70;background:#0F0F11;display:flex;flex-direction:column;overflow:hidden;animation:smFade .2s ease">
         <div style="flex-shrink:0;height:50px"></div>
         <div style="position:relative;flex-shrink:0;height:52px;display:flex;align-items:center;gap:6px;padding:0 8px;border-bottom:1px solid rgba(255,255,255,0.08)">
           <button onClick="{{ pdpBackToMall }}" aria-label="뒤로" style="all:unset;cursor:pointer;flex-shrink:0;width:40px;height:40px;display:flex;align-items:center;justify-content:center"><span data-icon="chevron_left:regular" style="width:22px;height:22px;display:block;line-height:0;color:#F7F7F8"></span></button>
@@ -2080,7 +2080,7 @@
         </div>
 
         <div style="flex:1;min-height:0;overflow-y:auto;scrollbar-width:none;display:flex;flex-direction:column">
-          <span style="position:relative;flex-shrink:0;display:block;width:100%;aspect-ratio:1/1;background-color:#2A2A2F;background-image:url('assets/img4/p1.jpg');background-size:cover;background-position:center">
+          <span style="position:relative;flex-shrink:0;display:block;width:100%;aspect-ratio:1/1;background-color:#202024;background-image:url('assets/img4/p1.jpg');background-size:cover;background-position:center">
             <span style="position:absolute;left:50%;bottom:14px;transform:translateX(-50%);display:flex;align-items:center;gap:6px">
               <sc-for list="{{ pdpDots }}" as="pdt" hint-placeholder-count="5">
                 <span style="display:block;width:7px;height:7px;border-radius:99px;background:{{ pdt.bg }}"></span>
@@ -2139,7 +2139,7 @@
                 </button>
               </sc-for>
               <span style="display:flex;align-items:center;gap:12px;padding:20px 20px 28px 20px">
-                <span style="flex-shrink:0;width:52px;height:52px;border-radius:99px;background-color:#2A2A2F;background-image:url('assets/img3/face2.jpg');background-size:cover;background-position:center"></span>
+                <span style="flex-shrink:0;width:52px;height:52px;border-radius:99px;background-color:#202024;background-image:url('assets/img3/face2.jpg');background-size:cover;background-position:center"></span>
                 <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
                   <span style="display:block;font-size:16px;line-height:23px;font-weight:800;color:#F7F7F8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">후려치는 창렬이</span>
                   <span style="display:block;font-size:13px;line-height:19px;color:rgba(255,255,255,0.5);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">매주 화요일 정규방송 · 월1회 창고데이</span>
@@ -2154,7 +2154,7 @@
               <sc-for list="{{ pdpReviews }}" as="prv" hint-placeholder-count="3">
                 <span style="display:flex;flex-direction:column;gap:7px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.08)">
                   <span style="display:flex;align-items:center;gap:8px">
-                    <span style="flex-shrink:0;width:30px;height:30px;border-radius:99px;background-color:#2A2A2F;background-image:{{ prv.face }};background-size:cover;background-position:center"></span>
+                    <span style="flex-shrink:0;width:30px;height:30px;border-radius:99px;background-color:#202024;background-image:{{ prv.face }};background-size:cover;background-position:center"></span>
                     <span style="flex:1;min-width:0;font-size:14px;line-height:20px;font-weight:700;color:#F7F7F8">{{ prv.name }}</span>
                     <span style="flex-shrink:0;font-size:13px;line-height:19px;color:rgba(255,255,255,0.42)">{{ prv.when }}</span>
                   </span>
@@ -2176,7 +2176,7 @@
           <span style="flex-shrink:0;display:block;height:96px"></span>
         </div>
 
-        <div style="position:absolute;left:0;right:0;bottom:0;z-index:6;display:flex;align-items:center;gap:10px;padding:10px 16px 26px 16px;background:#18181A;border-top:1px solid rgba(255,255,255,0.08)">
+        <div style="position:absolute;left:0;right:0;bottom:0;z-index:6;display:flex;align-items:center;gap:10px;padding:10px 16px 26px 16px;background:#0F0F11;border-top:1px solid rgba(255,255,255,0.08)">
           <button onClick="{{ togglePdpLike }}" aria-label="찜" style="all:unset;cursor:pointer;flex-shrink:0;width:40px;height:46px;display:flex;align-items:center;justify-content:center"><span data-icon="heart:regular" style="width:26px;height:26px;display:block;line-height:0;color:{{ pdpLikeFg }}"></span></button>
           <button onClick="{{ pdpBuy }}" style="all:unset;cursor:pointer;box-sizing:border-box;flex:1;min-width:0;height:46px;border-radius:6px;background:#FC678A;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;white-space:nowrap">바로구매</button>
         </div>
@@ -2271,7 +2271,7 @@
             </sc-if>
           </span>
         </div>
-        <div data-screen-label="댓글 시트" style="position:absolute;left:0;right:0;bottom:0;height:60%;background:#1C1C1E;border-radius:22px 22px 0 0;display:flex;flex-direction:column;animation:omSheetUp .3s cubic-bezier(.2,.8,.3,1)">
+        <div data-screen-label="댓글 시트" style="position:absolute;left:0;right:0;bottom:0;height:60%;background:#131315;border-radius:22px 22px 0 0;display:flex;flex-direction:column;animation:omSheetUp .3s cubic-bezier(.2,.8,.3,1)">
           <span style="align-self:center;width:36px;height:4px;border-radius:99px;background:rgba(255,255,255,.28);margin:10px 0 2px 0"></span>
           <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 20px 12px 20px">
             <span style="font-size:17px;font-weight:700;color:#fff">댓글 <span style="color:rgba(255,255,255,.45);font-weight:600">{{ commentCount }}</span></span>
@@ -2294,7 +2294,7 @@
             <span style="height:8px;flex-shrink:0"></span>
           </div>
           <div style="padding:10px 16px 26px 16px">
-            <div style="display:flex;gap:12px;align-items:center;height:56px;padding:0 20px 0 8px;border-radius:99px;background:#2C2C2E">
+            <div style="display:flex;gap:12px;align-items:center;height:56px;padding:0 20px 0 8px;border-radius:99px;background:#222224">
               <span style="width:40px;height:40px;border-radius:99px;background:#F9D9E4;display:flex;align-items:center;justify-content:center;color:#C43A72;font-size:var(--seed-font-size-t4);font-weight:700;flex-shrink:0">민</span>
               <input value="{{ commentText }}" onChange="{{ onCommentInput }}" placeholder="댓글을 입력해 주세요" style="flex:1;border:none;background:none;outline:none;font-size:var(--seed-font-size-t5);color:#fff;min-width:0">
               <button onClick="{{ sendComment }}" style="all:unset;cursor:pointer;flex-shrink:0;font-size:var(--seed-font-size-t5);font-weight:700;color:{{ sendColor }}">등록</button>
@@ -2308,13 +2308,13 @@
     <sc-if value="{{ shareOpen }}" hint-placeholder-val="{{ false }}">
       <div style="position:absolute;inset:0;z-index:80">
         <div onClick="{{ closeShare }}" style="position:absolute;inset:0;background:rgba(0,0,0,.5);animation:omFadeIn .18s ease"></div>
-        <div data-screen-label="공유하기" style="position:absolute;left:0;right:0;bottom:0;background:#1C1C1E;border-radius:24px 24px 0 0;display:flex;flex-direction:column;padding:10px 0 26px 0;animation:omSheetUp .24s cubic-bezier(.2,.8,.3,1)">
+        <div data-screen-label="공유하기" style="position:absolute;left:0;right:0;bottom:0;background:#131315;border-radius:24px 24px 0 0;display:flex;flex-direction:column;padding:10px 0 26px 0;animation:omSheetUp .24s cubic-bezier(.2,.8,.3,1)">
           <span style="align-self:center;width:36px;height:4px;border-radius:99px;background:rgba(255,255,255,.28)"></span>
           <span style="padding:18px 20px 14px 20px;font-size:22px;font-weight:800;letter-spacing:-0.5px;color:#fff">공유하기</span>
           <div style="display:flex;gap:14px;overflow-x:auto;padding:0 20px 18px 20px">
             <sc-for list="{{ shareTargets }}" as="t" hint-placeholder-count="5">
               <button onClick="{{ t.action }}" style="all:unset;cursor:pointer;flex-shrink:0;width:52px;display:flex;flex-direction:column;align-items:center;gap:8px">
-                <span style="width:52px;height:52px;border-radius:99px;background:#2C2C2E;display:flex;align-items:center;justify-content:center;color:{{ t.color }}"><span data-icon="{{ t.icon }}" style="width:23px;height:23px"></span></span>
+                <span style="width:52px;height:52px;border-radius:99px;background:#222224;display:flex;align-items:center;justify-content:center;color:{{ t.color }}"><span data-icon="{{ t.icon }}" style="width:23px;height:23px"></span></span>
                 <span style="font-size:var(--seed-font-size-t2);font-weight:600;color:rgba(255,255,255,.8);white-space:nowrap">{{ t.label }}</span>
               </button>
             </sc-for>
@@ -2371,28 +2371,28 @@
 
     <!-- 첫 진입 스켈레톤 -->
     <sc-if value="{{ booting }}" hint-placeholder-val="{{ false }}">
-      <div data-screen-label="로딩" style="position:absolute;inset:0;z-index:45;background:#18181A;padding-top:50px;display:flex;flex-direction:column;animation:{{ bootAnim }}">
+      <div data-screen-label="로딩" style="position:absolute;inset:0;z-index:45;background:#0F0F11;padding-top:50px;display:flex;flex-direction:column;animation:{{ bootAnim }}">
         <div style="height:58px;flex-shrink:0"></div>
         <div style="flex:1;overflow:hidden;display:flex;flex-direction:column;animation:omShimmer 1.4s ease-in-out infinite">
-          <span style="flex-shrink:0;margin:15px 20px 0 20px;height:197px;border-radius:16px;background:#232327"></span>
+          <span style="flex-shrink:0;margin:15px 20px 0 20px;height:197px;border-radius:16px;background:#19191C"></span>
           <span style="flex-shrink:0;display:flex;gap:24px;padding:0 16px;margin-top:20px">
-            <span style="width:44px;height:18px;border-radius:6px;background:#232327"></span>
-            <span style="width:58px;height:18px;border-radius:6px;background:#232327"></span>
-            <span style="width:70px;height:18px;border-radius:6px;background:#232327"></span>
-            <span style="width:44px;height:18px;border-radius:6px;background:#232327"></span>
+            <span style="width:44px;height:18px;border-radius:6px;background:#19191C"></span>
+            <span style="width:58px;height:18px;border-radius:6px;background:#19191C"></span>
+            <span style="width:70px;height:18px;border-radius:6px;background:#19191C"></span>
+            <span style="width:44px;height:18px;border-radius:6px;background:#19191C"></span>
           </span>
           <span style="flex-shrink:0;display:flex;align-items:center;gap:10px;padding:0 16px;margin-top:22px">
-            <span style="width:130px;height:22px;border-radius:7px;background:#232327"></span>
+            <span style="width:130px;height:22px;border-radius:7px;background:#19191C"></span>
             <span style="flex:1"></span>
-            <span style="width:64px;height:32px;border-radius:99px;background:#232327"></span>
-            <span style="width:78px;height:32px;border-radius:99px;background:#232327"></span>
+            <span style="width:64px;height:32px;border-radius:99px;background:#19191C"></span>
+            <span style="width:78px;height:32px;border-radius:99px;background:#19191C"></span>
           </span>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px 12px;padding:0 16px;margin-top:16px">
             <sc-for list="{{ bootCards }}" as="b" hint-placeholder-count="4">
               <span style="display:flex;flex-direction:column;gap:8px">
-                <span style="aspect-ratio:4/5;border-radius:18px;background:#232327"></span>
-                <span style="width:84%;height:16px;border-radius:6px;background:#232327"></span>
-                <span style="width:56%;height:14px;border-radius:6px;background:#232327"></span>
+                <span style="aspect-ratio:4/5;border-radius:18px;background:#19191C"></span>
+                <span style="width:84%;height:16px;border-radius:6px;background:#19191C"></span>
+                <span style="width:56%;height:14px;border-radius:6px;background:#19191C"></span>
               </span>
             </sc-for>
           </div>
@@ -2415,13 +2415,13 @@
     </sc-if>
 
     <sc-if value="{{ liveSearchOpen }}" hint-placeholder-val="{{ false }}">
-      <div data-screen-label="검색" style="position:absolute;inset:0;z-index:70;background:#18181A;padding-top:50px;display:flex;flex-direction:column;animation:smFade .18s ease">
+      <div data-screen-label="검색" style="position:absolute;inset:0;z-index:70;background:#0F0F11;padding-top:50px;display:flex;flex-direction:column;animation:smFade .18s ease">
         <div style="flex-shrink:0;display:flex;align-items:center;gap:12px;padding:8px 16px 12px 16px">
           <span style="flex:1;min-width:0;display:flex;align-items:center;gap:9px;height:44px;padding:0 14px;box-sizing:border-box;border-radius:8px;background:rgba(255,255,255,0.08)">
             <span data-icon="search:regular" style="flex-shrink:0;width:19px;height:19px;display:block;line-height:0;color:rgba(255,255,255,0.5)"></span>
             <input value="{{ liveSearchQ }}" onInput="{{ onLiveSearchInput }}" placeholder="검색" style="flex:1;min-width:0;border:0;outline:0;background:transparent;font-family:inherit;font-size:16px;line-height:24px;letter-spacing:0.0057em;color:#F7F7F8">
             <sc-if value="{{ liveSearchHasQ }}" hint-placeholder-val="{{ false }}">
-              <button onClick="{{ clearLiveSearch }}" aria-label="지우기" style="all:unset;cursor:pointer;flex-shrink:0;width:20px;height:20px;border-radius:99px;background:rgba(255,255,255,0.28);display:flex;align-items:center;justify-content:center"><span data-icon="close:regular" style="width:11px;height:11px;display:block;line-height:0;color:#18181A"></span></button>
+              <button onClick="{{ clearLiveSearch }}" aria-label="지우기" style="all:unset;cursor:pointer;flex-shrink:0;width:20px;height:20px;border-radius:99px;background:rgba(255,255,255,0.28);display:flex;align-items:center;justify-content:center"><span data-icon="close:regular" style="width:11px;height:11px;display:block;line-height:0;color:#0F0F11"></span></button>
             </sc-if>
           </span>
           <button onClick="{{ closeLiveSearch }}" style="all:unset;cursor:pointer;flex-shrink:0;font-size:16px;line-height:24px;letter-spacing:0.0057em;font-weight:500;color:#F7F7F8;white-space:nowrap">취소</button>
@@ -2431,7 +2431,7 @@
           <div style="flex:1;min-height:0;overflow-y:auto;scrollbar-width:none;display:flex;flex-direction:column">
             <sc-for list="{{ searchSuggest }}" as="sg" hint-placeholder-count="6">
               <button onClick="{{ sg.go }}" style="all:unset;cursor:pointer;display:flex;align-items:center;gap:12px;padding:11px 16px">
-                <span style="flex-shrink:0;width:38px;height:38px;border-radius:99px;background-color:#2A2A2F;background-image:{{ sg.face }};background-size:cover;background-position:center;display:block"></span>
+                <span style="flex-shrink:0;width:38px;height:38px;border-radius:99px;background-color:#202024;background-image:{{ sg.face }};background-size:cover;background-position:center;display:block"></span>
                 <span style="flex:1;min-width:0;display:block;font-size:16px;line-height:24px;letter-spacing:0.0057em;font-weight:700;color:#F7F7F8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ sg.name }}</span>
                 <span style="flex-shrink:0;display:inline-flex;align-items:center;gap:2px;font-size:14px;line-height:20px;letter-spacing:0.0145em;color:rgba(255,255,255,0.42);white-space:nowrap">바로가기<span data-icon="chevron_right:regular" style="width:14px;height:14px;display:block;line-height:0;color:rgba(255,255,255,0.42)"></span></span>
               </button>
@@ -2449,7 +2449,7 @@
               <div style="display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:0 16px">
                 <sc-for list="{{ searchRecent }}" as="rc" hint-placeholder-count="3">
                   <span style="flex-shrink:0;display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 14px 0 6px;border-radius:99px;background:rgba(255,255,255,0.08)">
-                    <span style="flex-shrink:0;width:28px;height:28px;border-radius:99px;background-color:#2A2A2F;background-image:{{ rc.face }};background-size:cover;background-position:center;display:block"></span>
+                    <span style="flex-shrink:0;width:28px;height:28px;border-radius:99px;background-color:#202024;background-image:{{ rc.face }};background-size:cover;background-position:center;display:block"></span>
                     <span style="font-size:14px;line-height:20px;letter-spacing:0.0145em;font-weight:500;color:#F7F7F8;white-space:nowrap">{{ rc.name }}</span>
                   </span>
                 </sc-for>
@@ -2466,7 +2466,7 @@
                   <button onClick="{{ rs.go }}" style="all:unset;cursor:pointer;display:flex;align-items:center;gap:8px;min-width:0">
                     <span style="flex-shrink:0;width:17px;text-align:center;font-size:15px;line-height:22px;letter-spacing:0.0096em;font-weight:700;color:#F7F7F8">{{ rs.rank }}</span>
                     <span style="flex-shrink:0;width:11px;text-align:center;font-size:11px;line-height:14px;color:{{ rs.deltaFg }}">{{ rs.delta }}</span>
-                    <span style="flex-shrink:0;width:32px;height:32px;border-radius:99px;background-color:#2A2A2F;background-image:{{ rs.face }};background-size:cover;background-position:center;box-shadow:{{ rs.ring }};display:block"></span>
+                    <span style="flex-shrink:0;width:32px;height:32px;border-radius:99px;background-color:#202024;background-image:{{ rs.face }};background-size:cover;background-position:center;box-shadow:{{ rs.ring }};display:block"></span>
                     <span style="flex:1;min-width:0;display:block;text-align:left;font-size:14px;line-height:20px;letter-spacing:0.0145em;font-weight:500;color:#F7F7F8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ rs.name }}</span>
                   </button>
                 </sc-for>
@@ -2478,7 +2478,7 @@
               <div style="display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding:0 16px">
                 <sc-for list="{{ searchRecentProd }}" as="rp" hint-placeholder-count="3">
                   <span style="flex-shrink:0;width:268px;display:flex;border-radius:12px;overflow:hidden;background:rgba(255,255,255,0.06)">
-                    <span style="flex-shrink:0;width:96px;height:96px;background-color:#2A2A2F;background-image:{{ rp.img }};background-size:cover;background-position:center;display:block"></span>
+                    <span style="flex-shrink:0;width:96px;height:96px;background-color:#202024;background-image:{{ rp.img }};background-size:cover;background-position:center;display:block"></span>
                     <span style="flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:0 14px">
                       <span style="display:-webkit-box;font-size:14px;line-height:20px;letter-spacing:0.0145em;color:#F7F7F8;word-break:keep-all;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">{{ rp.name }}</span>
                       <span style="display:flex;align-items:baseline;gap:6px">
@@ -2505,7 +2505,7 @@
     </sc-if>
 
     <sc-if value="{{ notifOpen }}" hint-placeholder-val="{{ false }}">
-      <div data-screen-label="알림" style="position:absolute;inset:0;z-index:70;background:#18181A;padding-top:50px;display:flex;flex-direction:column;animation:smFade .18s ease">
+      <div data-screen-label="알림" style="position:absolute;inset:0;z-index:70;background:#0F0F11;padding-top:50px;display:flex;flex-direction:column;animation:smFade .18s ease">
         <div style="flex-shrink:0;display:flex;align-items:center;gap:4px;height:52px;padding:0 12px">
           <button onClick="{{ closeNotif }}" aria-label="뒤로" style="all:unset;cursor:pointer;flex-shrink:0;width:40px;height:40px;display:flex;align-items:center;justify-content:center"><span data-icon="chevron_left:regular" style="width:22px;height:22px;display:block;line-height:0;color:#F7F7F8"></span></button>
           <span style="flex:1;min-width:0;text-align:center;font-size:18px;line-height:26px;letter-spacing:-0.002em;font-weight:700;color:#F7F7F8">알림</span>
@@ -2521,12 +2521,12 @@
           <sc-if value="{{ notifHasItems }}" hint-placeholder-val="{{ true }}">
             <sc-for list="{{ notifItems }}" as="nf" hint-placeholder-count="3">
               <button onClick="{{ nf.go }}" style="all:unset;cursor:pointer;display:flex;align-items:flex-start;gap:12px;padding:16px;border-bottom:1px solid rgba(255,255,255,0.08)">
-                <span style="flex-shrink:0;width:44px;height:44px;border-radius:99px;background-color:#2A2A2F;background-image:{{ nf.face }};background-size:cover;background-position:center;display:block"></span>
+                <span style="flex-shrink:0;width:44px;height:44px;border-radius:99px;background-color:#202024;background-image:{{ nf.face }};background-size:cover;background-position:center;display:block"></span>
                 <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px;text-align:left">
                   <span style="display:block;font-size:15px;line-height:22px;letter-spacing:0.0096em;color:#F7F7F8;word-break:keep-all"><span style="font-weight:700;color:{{ nf.kindFg }}">{{ nf.kind }}</span> {{ nf.text }}</span>
                   <span style="display:block;font-size:13px;line-height:18px;letter-spacing:0.0194em;color:rgba(255,255,255,0.42)">{{ nf.when }}</span>
                 </span>
-                <span style="flex-shrink:0;width:44px;height:44px;border-radius:8px;background-color:#2A2A2F;background-image:{{ nf.thumb }};background-size:cover;background-position:center;display:block"></span>
+                <span style="flex-shrink:0;width:44px;height:44px;border-radius:8px;background-color:#202024;background-image:{{ nf.thumb }};background-size:cover;background-position:center;display:block"></span>
               </button>
             </sc-for>
           </sc-if>
@@ -2534,7 +2534,7 @@
             <span style="display:block;padding:16px 16px 4px 16px;font-size:13px;line-height:18px;letter-spacing:0.0194em;font-weight:600;color:rgba(255,255,255,0.5)">{{ notifActCount }}</span>
             <sc-for list="{{ notifAlarms }}" as="al" hint-placeholder-count="2">
               <span onClick="{{ al.go }}" style="cursor:pointer;display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px solid rgba(255,255,255,0.08)">
-                <span style="flex-shrink:0;width:44px;height:44px;border-radius:99px;background-color:#2A2A2F;background-image:{{ al.face }};background-size:cover;background-position:center;display:block"></span>
+                <span style="flex-shrink:0;width:44px;height:44px;border-radius:99px;background-color:#202024;background-image:{{ al.face }};background-size:cover;background-position:center;display:block"></span>
                 <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
                   <span style="display:block;font-size:15px;line-height:22px;letter-spacing:0.0096em;font-weight:700;color:#F7F7F8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ al.title }}</span>
                   <span style="display:block;font-size:13px;line-height:18px;letter-spacing:0.0194em;color:rgba(255,255,255,0.5);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ al.seller }} · <span style="font-weight:700;color:#FF9BB4">{{ al.whenDate }} {{ al.whenTime }}</span></span>
@@ -2547,7 +2547,7 @@
             <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:80px 40px">
               <span style="display:block;text-align:center;font-size:15px;line-height:22px;letter-spacing:-0.022em;font-weight:700;color:#F7F7F8">받기로 한 라이브 알림이 없어요</span>
               <span style="display:block;text-align:center;font-size:14px;line-height:20px;letter-spacing:0.0145em;color:rgba(255,255,255,0.5);word-break:keep-all">라이브 예고에서 알림 받기를 누르면<br>여기에서 관리할 수 있어요</span>
-              <button onClick="{{ goSchedFromNotif }}" style="all:unset;cursor:pointer;margin-top:14px;display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:99px;background:#F7F7F8;font-size:15px;line-height:22px;letter-spacing:0.0096em;font-weight:700;color:#18181A">라이브 예고 보러 가기</button>
+              <button onClick="{{ goSchedFromNotif }}" style="all:unset;cursor:pointer;margin-top:14px;display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:99px;background:#F7F7F8;font-size:15px;line-height:22px;letter-spacing:0.0096em;font-weight:700;color:#0F0F11">라이브 예고 보러 가기</button>
             </div>
           </sc-if>
         </div>
@@ -2863,7 +2863,7 @@ class Component extends DCLogic {
     const y = this._storeY || 0;
     const on = y > 250;
     const head = document.getElementById("om-store-head");
-    if (head) head.style.background = on ? "#18181A" : "rgba(23,23,26,0)";
+    if (head) head.style.background = on ? "#0F0F11" : "rgba(23,23,26,0)";
     const title = document.getElementById("om-store-title");
     if (title) title.style.opacity = on ? "1" : "0";
 
@@ -3349,7 +3349,7 @@ class Component extends DCLogic {
     v.pgDealD = nav === 3 ? "flex" : "none";
     v.pgTodayD = nav === 4 ? "flex" : "none";
     const _num = (x) => Number(String(x || "").replace(/[^0-9]/g, "")) || 0;
-    const _chips = (defs, cur, key) => defs.map(([k, label]) => { const on = cur === k; return { label, bg: on ? "#F7F7F8" : "rgba(255,255,255,0.08)", fg: on ? "#18181A" : "#BABABC", fw: on ? "700" : "500", pick: () => this.setState({ [key]: k }) }; });
+    const _chips = (defs, cur, key) => defs.map(([k, label]) => { const on = cur === k; return { label, bg: on ? "#F7F7F8" : "rgba(255,255,255,0.08)", fg: on ? "#0F0F11" : "#BABABC", fw: on ? "700" : "500", pick: () => this.setState({ [key]: k }) }; });
     const _sort = (arr, k) => { const a = arr.slice(); if (k === "off") a.sort((x, y) => _num(y.off) - _num(x.off)); else if (k === "low") a.sort((x, y) => _num(x.price) - _num(y.price)); else if (k === "high") a.sort((x, y) => _num(y.price) - _num(x.price)); return a; };
     const DEAL_ALL = REPLAY.slice(0, 6).concat([
       { img: PIMG("p7.png"), name: "산리오 보냉백 4종 세트", listPrice: "59,000원", off: "45%", price: "32,500원" },
@@ -4826,12 +4826,12 @@ class Component extends DCLogic {
         4: ["#3A3A3C", "none", "none", "#CDCDD0"],
         5: ["#111113", "none", "none", "#BABABC"] }[k] || ["rgba(0,0,0,0.55)", "none", "none", "rgba(255,255,255,0.72)"];
       o.sbBg = B[0]; o.sbBd = B[1]; o.sbBlur = B[2]; o.sbFg = B[3]; } { const st = parseInt(String(P.cardBgStyle ?? "1"), 10) || 1; const T = {
-        1: ["40%", "0 0 16px 16px", "#252528", "none", "none"],
-        2: ["40%", "0 0 16px 16px", "#18181A", "none", "block"],
+        1: ["40%", "0 0 16px 16px", "#1A1A1D", "none", "none"],
+        2: ["40%", "0 0 16px 16px", "#0F0F11", "none", "block"],
         3: ["0", "16px", "transparent", "inset 0 0 0 1px rgba(255,255,255,0.14)", "none"],
         4: ["40%", "0 0 16px 16px", "linear-gradient(to bottom, rgba(252,103,138,0.04) 0%, rgba(252,103,138,0.16) 100%)", "none", "none"],
         5: ["0", "16px", "transparent", "none", "none"] }[st] || ["40%", "0 0 16px 16px", "#1F1F23", "none", "none"];
-      o.pnTop = T[0]; o.pnRad = T[1]; o.pnBg = T[2]; o.pnBd = T[3]; o.pnBlurD = T[4]; o.pnD = st === 5 ? "none" : "block"; o.infoPad = st === 5 ? "10px 4px 2px 4px" : "10px 10px 11px 10px"; } { const two = /2/.test(String(P.liveCols ?? "1배열")); o.liveTwo = two; o.liveDir = two ? "row" : "column"; o.cardFlex = two ? "1 1 0" : "0 0 auto"; o.liveGap = two ? "10px" : "20px"; o.ttlInset = two ? "10px" : "16px"; o.ttlFs = two ? "15px" : "24px"; o.ttlLh = two ? "20px" : "32px"; o.bdgInset = two ? "8px" : "12px"; o.evtD = two ? "none" : "inline-flex"; o.sbPad = two ? "4px 8px 5px 8px" : "8px 12px 7px 12px"; o.sbDateFs = two ? "11px" : "15px"; o.sbDateLh = two ? "14px" : "20px"; o.sbTimeFs = two ? "12px" : "17px"; o.sbTimeLh = two ? "15px" : "22px"; o.avSz = two ? "22px" : "28px"; o.sellerFs = two ? "12px" : "14px"; o.joinD = two ? "none" : "inline-flex"; if (two) o.infoPad = "8px 10px 9px 10px"; } o.cardDisp = sep ? "flex" : "block"; o.cardAR = sep ? "auto" : "4/5"; o.cardBg = sep ? "transparent" : "#121214"; o.imgPos = sep ? "relative" : "absolute"; o.imgInset = sep ? "auto" : "0"; o.imgRadius = sep ? "16px" : "0"; o.cardFrameD = sep ? "none" : "block"; o.imgGrad = n >= 12 ? "linear-gradient(to bottom, rgba(0,0,0,.32) 0%, rgba(0,0,0,0) 22%, rgba(0,0,0,0) 36%, rgba(0,0,0,.6) 62%, rgba(0,0,0,.92) 100%)" : sep ? "linear-gradient(to bottom, rgba(0,0,0,.32) 0%, rgba(0,0,0,0) 22%)" : "linear-gradient(to top, rgba(10,10,12,.94) 0%, rgba(10,10,12,.78) 24%, rgba(10,10,12,.32) 44%, rgba(0,0,0,0) 58%, rgba(0,0,0,0) 80%, rgba(0,0,0,.4) 100%)"; return o; })(),
+      o.pnTop = T[0]; o.pnRad = T[1]; o.pnBg = T[2]; o.pnBd = T[3]; o.pnBlurD = T[4]; o.pnD = st === 5 ? "none" : "block"; o.infoPad = st === 5 ? "10px 4px 2px 4px" : "10px 10px 11px 10px"; } { const two = /2/.test(String(P.liveCols ?? "1배열")); o.liveTwo = two; o.liveDir = two ? "row" : "column"; o.cardFlex = two ? "1 1 0" : "0 0 auto"; o.liveGap = two ? "10px" : "20px"; o.ttlInset = two ? "10px" : "16px"; o.ttlFs = two ? "15px" : "24px"; o.ttlLh = two ? "20px" : "32px"; o.bdgInset = two ? "8px" : "12px"; o.evtD = two ? "none" : "inline-flex"; o.sbPad = two ? "4px 8px 5px 8px" : "8px 12px 7px 12px"; o.sbDateFs = two ? "11px" : "15px"; o.sbDateLh = two ? "14px" : "20px"; o.sbTimeFs = two ? "12px" : "17px"; o.sbTimeLh = two ? "15px" : "22px"; o.avSz = two ? "22px" : "28px"; o.sellerFs = two ? "12px" : "14px"; o.joinD = two ? "none" : "inline-flex"; if (two) o.infoPad = "8px 10px 9px 10px"; } o.cardDisp = sep ? "flex" : "block"; o.cardAR = sep ? "auto" : "4/5"; o.cardBg = sep ? "transparent" : "#0B0B0D"; o.imgPos = sep ? "relative" : "absolute"; o.imgInset = sep ? "auto" : "0"; o.imgRadius = sep ? "16px" : "0"; o.cardFrameD = sep ? "none" : "block"; o.imgGrad = n >= 12 ? "linear-gradient(to bottom, rgba(0,0,0,.32) 0%, rgba(0,0,0,0) 22%, rgba(0,0,0,0) 36%, rgba(0,0,0,.6) 62%, rgba(0,0,0,.92) 100%)" : sep ? "linear-gradient(to bottom, rgba(0,0,0,.32) 0%, rgba(0,0,0,0) 22%)" : "linear-gradient(to top, rgba(10,10,12,.94) 0%, rgba(10,10,12,.78) 24%, rgba(10,10,12,.32) 44%, rgba(0,0,0,0) 58%, rgba(0,0,0,0) 80%, rgba(0,0,0,.4) 100%)"; return o; })(),
       mShopItems: REPLAY.slice(0, 6),
       goMall: () => this.openMall(),
       tv9: parseInt(P.trayCard ?? "9", 10) === 9, tv10: parseInt(P.trayCard ?? "9", 10) !== 9,
@@ -5107,7 +5107,7 @@ class Component extends DCLogic {
         return { label, pick: () => this.setState({ mStoreCat: i }),
           bg: on ? "#F7F7F8" : "transparent",
           ring: on ? "none" : "inset 0 0 0 1px rgba(255,255,255,0.20)",
-          fg: on ? "#18181A" : "rgba(255,255,255,0.78)",
+          fg: on ? "#0F0F11" : "rgba(255,255,255,0.78)",
           weight: on ? "700" : "600" };
       }),
       storeProducts: [
@@ -5349,7 +5349,7 @@ class Component extends DCLogic {
           pick: () => this.setState({ mRankMode: i }),
           bg: on ? "#F7F7F8" : "transparent",
           bd: on ? "transparent" : "rgba(255,255,255,0.18)",
-          fg: on ? "#18181A" : "rgba(255,255,255,0.72)",
+          fg: on ? "#0F0F11" : "rgba(255,255,255,0.72)",
           weight: on ? "700" : "600"
         };
       }),
@@ -5393,7 +5393,7 @@ class Component extends DCLogic {
         pick: () => this.setState({ mRchip: i }),
         bg: S.mRchip === i ? "#F7F7F8" : "transparent",
         bd: S.mRchip === i ? "#F7F7F8" : "rgba(255,255,255,0.20)",
-        fg: S.mRchip === i ? "#18181A" : "rgba(255,255,255,0.78)"
+        fg: S.mRchip === i ? "#0F0F11" : "rgba(255,255,255,0.78)"
       })),
       mSubCats: [
         { label: "여성패션", img: PIMG("p5.jpg") },
@@ -5439,7 +5439,7 @@ class Component extends DCLogic {
       },
       liveFollowLabel: S.liveFollowing ? "팔로잉" : "팔로우",
       liveFollowBg: S.liveFollowing ? "transparent" : "#F7F7F8",
-      liveFollowFg: S.liveFollowing ? "#F7F7F8" : "#18181A",
+      liveFollowFg: S.liveFollowing ? "#F7F7F8" : "#0F0F11",
       liveFollowRing: S.liveFollowing ? "inset 0 0 0 1px rgba(255,255,255,.72)" : "none",
       toggleLiveFollow: (e) => { if (e && e.stopPropagation) e.stopPropagation(); this.setState({ liveFollowing: !S.liveFollowing }); },
       liveTrayItems: [
@@ -5451,7 +5451,7 @@ class Component extends DCLogic {
       closeMInfo: () => this.setState({ mInfoOpen: false }),
       mInfoRows: (() => {
         const t = S.mInfoTab == null ? 1 : S.mInfoTab;
-        const base = { markRadius: "99px", markBg: "#F7F7F8", markFg: "#18181A", titleSize: "15px", bodyPad: "13px 14px", bodyBg: "rgba(255,255,255,0.07)" };
+        const base = { markRadius: "99px", markBg: "#F7F7F8", markFg: "#0F0F11", titleSize: "15px", bodyPad: "13px 14px", bodyBg: "rgba(255,255,255,0.07)" };
         if (t === 0) return [{ ...base, mark: "공지", markRadius: "6px", markBg: "rgba(255,255,255,0.14)", markFg: "#F7F7F8", titleSize: "18px", title: "라이브 소개", meta: "글로우핏 공식", body: "수분 앰플 첫 런칭 라이브예요. 배송비는 1회만 결제하면 되고, 추가 구매는 모두 합배송해 드려요.", bodyMeta: "오늘 20:00까지" }];
         if (t === 2) return [{ ...base, mark: "01", markRadius: "6px", markBg: "#FC678A", markFg: "#fff", titleSize: "18px", title: "숏챌몰 8월 슈퍼위크", meta: "8월 1일 - 8월 31일", body: "요일마다 달라지는 슈퍼위크 혜택과 함께 라이브를 시청하고 쿠폰을 받으세요. 무제한 시청 쿠폰 4종과 매일 출석 1,500P가 준비돼 있어요.", bodyMeta: "슈퍼위크 참여 셀러 라이브에서만 적용" }];
         return [
@@ -5523,7 +5523,7 @@ class Component extends DCLogic {
           maskRe: "url('assets/icons/icon_" + n.icon + "_regular.svg')", maskFi: "url('assets/icons/icon_" + n.icon + "_fill.svg')",
           opRe: on ? "0" : "1", opFi: on ? "1" : "0",
           anim: on ? "omTabPop 560ms cubic-bezier(.33,.9,.28,1)" : "none",
-          fg: on ? "#18181A" : "rgba(46,47,51,.62)",
+          fg: on ? "#0F0F11" : "rgba(46,47,51,.62)",
           tap: () => n.sub === "__home" ? this.setState({ mallOpen: false, mallSub: null, pdpOpen: false, mLiveOpen: false, mSheet: null }) : this.setState({ mallOpen: true, mallSub: n.sub }) };
       }),
       mallSubMenu: S.mallSub === "menu", mallSubMy: S.mallSub === "my",
@@ -5563,12 +5563,12 @@ class Component extends DCLogic {
         { label: "반려동물", icon: "community:regular", bg: "#F4F5F6", fg: "rgba(46,47,51,.61)" }
       ].map(c => ({ ...c,
         weight: c.accent ? 800 : 700,
-        lfg: c.accent ? "#FC678A" : "#18181A",
+        lfg: c.accent ? "#FC678A" : "#0F0F11",
         plus: c.accent ? "transparent" : "rgba(46,47,51,.4)",
         tap: () => this.showToast(c.label + " 카테고리를 열었어요") })),
       mallOrderFilters: ["전체", "배송중", "배송완료"].map((label, i) => ({
-        label, fg: i === 0 ? "#18181A" : "rgba(112,115,124,0.4)",
-        tfg: i === 0 ? "#18181A" : "rgba(46,47,51,.52)", weight: i === 0 ? 800 : 600
+        label, fg: i === 0 ? "#0F0F11" : "rgba(112,115,124,0.4)",
+        tfg: i === 0 ? "#0F0F11" : "rgba(46,47,51,.52)", weight: i === 0 ? 800 : 600
       })),
       mallMyGroups: [
         { title: "나의 주문 관리", rows: [
@@ -5591,7 +5591,7 @@ class Component extends DCLogic {
       mallOpen: !!S.mallOpen,
       mallTabs: ["인기 베스트", "랭킹 베스트", "오늘의 신상품", "빠른배송"].map((label, i) => ({
         label,
-        fg: i === 0 ? "#FC678A" : "#18181A",
+        fg: i === 0 ? "#FC678A" : "#0F0F11",
         weight: i === 0 ? 800 : 700
       })),
       mallQuick: [
@@ -6086,10 +6086,10 @@ class Component extends DCLogic {
         { label: "더보기", icon: "ios_share", color: "#fff" }
       ].map(t => ({ ...t, action: () => { this.setState({ shareOpen: false }); this.showToast(t.label + "으로 공유했어요"); } })),
       shareActions: (S.shareContext === "profile"
-        ? [{ label: "초대코드 복사", icon: "link", color: "#fff", iconBg: "#2C2C2E", toast: "초대 코드 QQ7KIX를 복사했어요" }]
+        ? [{ label: "초대코드 복사", icon: "link", color: "#fff", iconBg: "#222224", toast: "초대 코드 QQ7KIX를 복사했어요" }]
         : [
-            { label: "영상 링크 복사", icon: "link", color: "#fff", iconBg: "#2C2C2E", toast: "링크를 복사했어요" },
-            { label: "이 영상 숨기기", icon: "eye_off", color: "#fff", iconBg: "#2C2C2E", toast: "비슷한 영상을 줄일게요" },
+            { label: "영상 링크 복사", icon: "link", color: "#fff", iconBg: "#222224", toast: "링크를 복사했어요" },
+            { label: "이 영상 숨기기", icon: "eye_off", color: "#fff", iconBg: "#222224", toast: "비슷한 영상을 줄일게요" },
             { label: "신고하기", icon: "warning", color: "#F44E99", iconBg: "rgba(244,78,153,.16)", toast: "신고를 접수했어요" }
           ]
       ).map(a => ({ ...a, action: () => { this.setState({ shareOpen: false }); this.showToast(a.toast); } })),
